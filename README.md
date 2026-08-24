@@ -1,8 +1,14 @@
+<p align="center">
+  <picture>
+    <source media="(max-width: 760px) and (prefers-color-scheme: dark)" srcset="./assets/hero/omar-profile-v3-mobile-dark.svg">
+    <source media="(max-width: 760px)" srcset="./assets/hero/omar-profile-v3-mobile-light.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/hero/omar-profile-v3-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/hero/omar-profile-v3-light.svg">
+    <img src="./assets/hero/omar-profile-v3-dark.svg" alt="Omar Arafa, Full Stack PHP Developer" width="100%">
+  </picture>
+</p>
+
 <div align="center">
-
-<img src="./assets/profile-terminal.svg" alt="Omar Arafa Terminal Profile" width="100%" />
-
-<br>
 
 <a href="https://omararafa295-cmd.github.io/Omar-Arafa-Portfolio/index.html">
   <img src="https://img.shields.io/badge/Portfolio-0D1117?style=for-the-badge&logo=googlechrome&logoColor=58A6FF" alt="Portfolio" />
