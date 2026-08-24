@@ -1,0 +1,42 @@
+name: Generate profile hero
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/generate_profile_hero.py'
+      - '.github/workflows/generate-profile-hero.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Pillow
+        run: python -m pip install --disable-pip-version-check pillow
+
+      - name: Generate hero assets
+        run: python scripts/generate_profile_hero.py
+
+      - name: Commit generated SVGs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/hero/omar-profile-v3-*.svg
+          if git diff --cached --quiet; then
+            echo "No generated changes"
+            exit 0
+          fi
+          git commit -m "chore: generate responsive ASCII profile hero"
+          git push
