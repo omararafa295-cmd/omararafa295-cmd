@@ -109,8 +109,12 @@ class OmarArafa implements FullStackInterface, ControlSystemsInterface
 
 ### `omar@developer:~$ keep_building_`
 
-<img src="https://github-readme-stats.vercel.app/api?username=omararafa295-cmd&show_icons=true&hide_border=true&bg_color=0D1117&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9" height="165" alt="GitHub Stats" />
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=omararafa295-cmd&hide_border=true&background=0D1117&stroke=30363D&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF&sideLabels=C9D1D9&currStreakNum=E6EDF3&sideNums=E6EDF3&dates=8B949E" height="165" alt="GitHub Streak" />
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=omararafa295-cmd&show_icons=true&theme=github_dark&hide_border=true&bg_color=00000000&title_color=58A6FF&text_color=E6EDF3&icon_color=58A6FF&rank_icon=github" alt="GitHub Stats" />
+<img width="49%" src="https://streak-stats.demolab.com?user=omararafa295-cmd&theme=github-dark-blue&hide_border=true&background=00000000&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF&sideNums=E6EDF3&currStreakNum=E6EDF3&sideLabels=8B949E&dates=8B949E" alt="GitHub Streak" />
+
+<br><br>
+
+<img width="55%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=omararafa295-cmd&layout=compact&theme=github_dark&hide_border=true&bg_color=00000000&title_color=58A6FF&text_color=E6EDF3" alt="Top Languages" />
 
 <br><br>
 
