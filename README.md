@@ -1,10 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(max-width: 760px) and (prefers-color-scheme: dark)" srcset="./assets/hero/omar-profile-v3-mobile-dark.svg">
-    <source media="(max-width: 760px)" srcset="./assets/hero/omar-profile-v3-mobile-light.svg">
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/hero/omar-profile-v3-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/hero/omar-profile-v3-light.svg">
-    <img src="./assets/hero/omar-profile-v3-dark.svg" alt="Omar Arafa, Full Stack PHP Developer" width="100%">
+    <source media="(max-width: 760px)" srcset="./assets/hero/omar-profile-v4-mobile.svg">
+    <img src="./assets/hero/omar-profile-v4.svg" alt="Omar Arafa, Full Stack PHP Developer" width="100%">
   </picture>
 </p>
 
@@ -115,12 +112,15 @@ class OmarArafa implements FullStackInterface, ControlSystemsInterface
 
 ### `omar@developer:~$ keep_building_`
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=omararafa295-cmd&show_icons=true&theme=github_dark&hide_border=true&bg_color=00000000&title_color=58A6FF&text_color=E6EDF3&icon_color=58A6FF&rank_icon=github" alt="GitHub Stats" />
-<img width="49%" src="https://streak-stats.demolab.com?user=omararafa295-cmd&theme=github-dark-blue&hide_border=true&background=00000000&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF&sideNums=E6EDF3&currStreakNum=E6EDF3&sideLabels=8B949E&dates=8B949E" alt="GitHub Streak" />
+<img width="500" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=omararafa295-cmd&theme=github_dark" alt="GitHub Stats" />
 
 <br><br>
 
-<img width="55%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=omararafa295-cmd&layout=compact&theme=github_dark&hide_border=true&bg_color=00000000&title_color=58A6FF&text_color=E6EDF3" alt="Top Languages" />
+<img width="500" src="https://streak-stats.demolab.com?user=omararafa295-cmd&theme=github-dark-blue&border_radius=10&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF" alt="GitHub Streak" />
+
+<br><br>
+
+<img width="500" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=omararafa295-cmd&theme=github_dark" alt="Top Languages" />
 
 <br><br>
 
