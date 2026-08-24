@@ -1,29 +1,24 @@
 <div align="center">
-  <!-- Dynamic Waving Header -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:111111,100:005C97&height=220&section=header&text=Omar%20Arafa&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Software%20Engineer%20%7C%20Systems%20Thinker&descAlignY=55&descSize=20" alt="Header" width="100%" />
 
-  <!-- Animated Typing Effect -->
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=38BDF8&center=true&vCenter=true&width=600&lines=Computer+%26+Systems+Engineering;Backend+Developer+(Laravel);Embedded+Systems+Enthusiast;Bridging+Software+%26+Hardware" alt="Typing SVG" />
-  </a>
-
-  <br>
-
-  <!-- Interactive Badges -->
-  <a href="https://omararafa295-cmd.github.io/Omar-Arafa-Portfolio/index.html">
-    <img src="https://img.shields.io/badge/🌍_Live_Portfolio-0f172a?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" />
-  </a>
-  <a href="https://linkedin.com/in/omar-arafa-641504358/">
-    <img src="https://img.shields.io/badge/🤝_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  <a href="mailto:omararafa294@gmail.com">
-    <img src="https://img.shields.io/badge/✉️_Email_Me-ea4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-</div>
+<img src="./assets/profile-terminal.svg" alt="Omar Arafa Terminal Profile" width="100%" />
 
 <br>
 
-### 🧠 The Core Logic // Who Am I?
+<a href="https://omararafa295-cmd.github.io/Omar-Arafa-Portfolio/index.html">
+  <img src="https://img.shields.io/badge/Portfolio-0D1117?style=for-the-badge&logo=googlechrome&logoColor=58A6FF" alt="Portfolio" />
+</a>
+<a href="https://linkedin.com/in/omar-arafa-641504358/">
+  <img src="https://img.shields.io/badge/LinkedIn-0D1117?style=for-the-badge&logo=linkedin&logoColor=58A6FF" alt="LinkedIn" />
+</a>
+<a href="mailto:omararafa294@gmail.com">
+  <img src="https://img.shields.io/badge/Email-0D1117?style=for-the-badge&logo=gmail&logoColor=58A6FF" alt="Email" />
+</a>
+
+</div>
+
+---
+
+## `~/core-logic` — Who Am I?
 
 ```php
 <?php
@@ -33,7 +28,7 @@ namespace App\Engineers;
 use Tech\Software\Laravel;
 use Tech\Hardware\EmbeddedSystems;
 
-class OmarArafa implements FullStackInterface, ControlSystemsInterface 
+class OmarArafa implements FullStackInterface, ControlSystemsInterface
 {
     use ProblemSolving;
 
@@ -41,7 +36,7 @@ class OmarArafa implements FullStackInterface, ControlSystemsInterface
     private string $major = 'Computer & Systems Engineering';
     private int $academicYear = 3;
 
-    public function getSystemStatus(): array 
+    public function getSystemStatus(): array
     {
         return [
             'Current Focus' => 'Architecting scalable backend solutions & IoT integration',
@@ -50,13 +45,75 @@ class OmarArafa implements FullStackInterface, ControlSystemsInterface
         ];
     }
 
-    public function executeDailyProcess(string $currentTask): string 
+    public function executeDailyProcess(string $currentTask): string
     {
-        return match($currentTask) {
-            'backend'   => Laravel::buildScalableAPI()->optimizeQueries(),
-            'hardware'  => EmbeddedSystems::tunePID()->deployToArduino(),
-            'learning'  => $this->absorbNewTechnologies(),
-            default     => 'Compiling code and drinking coffee... ☕'
+        return match ($currentTask) {
+            'backend'  => Laravel::buildScalableAPI()->optimizeQueries(),
+            'hardware' => EmbeddedSystems::tunePID()->deployToArduino(),
+            'learning' => $this->absorbNewTechnologies(),
+            default    => 'Compiling code and drinking coffee... ☕'
         };
     }
 }
+```
+
+---
+
+## `~/stack` — Build Environment
+
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=php,laravel,mysql,html,css,js,bootstrap,git,github,vscode,arduino&theme=dark" alt="Tech Stack" />
+
+</div>
+
+<br>
+
+<table align="center">
+  <tr>
+    <td><b>Backend</b></td>
+    <td>PHP • Laravel • RESTful APIs • MySQL</td>
+  </tr>
+  <tr>
+    <td><b>Frontend</b></td>
+    <td>HTML • CSS • JavaScript • Bootstrap</td>
+  </tr>
+  <tr>
+    <td><b>Architecture</b></td>
+    <td>MVC • Service-Oriented Design</td>
+  </tr>
+  <tr>
+    <td><b>Hardware</b></td>
+    <td>PID Controllers • Sensor Integration • Microcontrollers • IoT</td>
+  </tr>
+  <tr>
+    <td><b>Toolchain</b></td>
+    <td>Git • GitHub • VS Code • Arduino</td>
+  </tr>
+</table>
+
+---
+
+## `~/status` — Current Focus
+
+```text
+[01] Building scalable Laravel backends
+[02] Improving database and API architecture
+[03] Connecting software systems with embedded hardware
+[04] Learning through practical engineering projects
+```
+
+---
+
+<div align="center">
+
+### `omar@developer:~$ keep_building_`
+
+<img src="https://github-readme-stats.vercel.app/api?username=omararafa295-cmd&show_icons=true&hide_border=true&bg_color=0D1117&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9" height="165" alt="GitHub Stats" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=omararafa295-cmd&hide_border=true&background=0D1117&stroke=30363D&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF&sideLabels=C9D1D9&currStreakNum=E6EDF3&sideNums=E6EDF3&dates=8B949E" height="165" alt="GitHub Streak" />
+
+<br><br>
+
+<img src="https://komarev.com/ghpvc/?username=omararafa295-cmd&label=PROFILE+VIEWS&color=1f6feb&style=flat-square" alt="Profile Views" />
+
+</div>
