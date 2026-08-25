@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the responsive v7 terminal hero used by the profile README."""
+"""Generate the responsive v8 terminal hero used by the profile README."""
 
 from __future__ import annotations
 
@@ -58,7 +58,10 @@ def isolate_portrait(image: Image.Image) -> Image.Image:
 
     clean = Image.new("L", image.size, 255)
     clean.paste(gray, mask=mask)
-    return clean
+
+    # Allocate the available character grid to Omar instead of the empty sides
+    # of the square avatar. Larger glyphs remain crisp at GitHub's display size.
+    return clean.crop((150, 0, 720, 920))
 
 
 def ascii_art(image: Image.Image, columns: int, rows: int) -> list[str]:
@@ -97,7 +100,7 @@ def tspans(lines: list[str], x: float, y: float, line_height: float) -> str:
 
 
 def desktop_svg(portrait: Image.Image) -> str:
-    art = ascii_art(portrait, 112, 106)
+    art = ascii_art(portrait, 84, 94)
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="735" viewBox="0 0 1280 735" role="img" aria-labelledby="title description">
 <title id="title">Omar Arafa — Full Stack PHP Developer</title>
 <desc id="description">Large premium terminal card with a high-detail, full-frame ASCII portrait of Omar Arafa.</desc>
@@ -113,7 +116,7 @@ def desktop_svg(portrait: Image.Image) -> str:
   <filter id="nameGlow" x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   <style>
     .mono,.ascii,.tiny,.key,.value,.sec,.foot{{font-family:'Courier New',Consolas,monospace}}
-    .ascii{{font-size:5.35px;letter-spacing:-.18px;fill:url(#ascii)}}
+    .ascii{{font-size:7.25px;letter-spacing:-.25px;fill:url(#ascii)}}
     .tiny{{font-size:11px;letter-spacing:2px;fill:#8B949E}}
     .key{{font-size:15px;font-weight:700;fill:#58A6FF}}
     .value{{font-size:15px;font-weight:700;fill:#F0F6FC}}
@@ -142,11 +145,11 @@ def desktop_svg(portrait: Image.Image) -> str:
   <rect x="42" y="196" width="526" height="420" rx="12" fill="url(#grid)"/>
   <text x="305" y="392" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="96" font-weight="900" letter-spacing="10" fill="#58A6FF" opacity=".025">OMAR</text>
   <ellipse cx="305" cy="405" rx="218" ry="180" fill="url(#halo)"/>
-  <text class="ascii" transform="translate(4 0) scale(1.07 1)">{tspans(art, 118, 194, 4.02)}</text>
+  <text class="ascii" transform="translate(4 0) scale(1.07 1)">{tspans(art, 118, 194, 4.48)}</text>
   <rect x="72" y="358" width="466" height="1.2" fill="url(#blue)" opacity=".56" class="scan"/>
 </g>
 <rect x="42" y="619" width="526" height="18" rx="7" fill="#0B1521" stroke="#1F6FEB" stroke-opacity=".7"/>
-<text x="305" y="632" text-anchor="middle" class="mono" font-size="9.3" font-weight="700" letter-spacing="1.35" fill="#79C0FF">COMPLETE FRAME • 112-COLUMN ASCII • VECTOR SHARP</text>
+<text x="305" y="632" text-anchor="middle" class="mono" font-size="9.3" font-weight="700" letter-spacing="1.35" fill="#79C0FF">COMPLETE FRAME • CLEAN ASCII • GITHUB OPTIMIZED</text>
 
 <text x="622" y="211" class="mono" font-size="15" font-weight="700" fill="#F0F6FC">omararafa295-cmd</text>
 <text x="622" y="251" class="key">Name:</text><text x="780" y="251" class="value">Omar Arafa</text>
@@ -169,7 +172,7 @@ def desktop_svg(portrait: Image.Image) -> str:
 
 
 def mobile_svg(portrait: Image.Image) -> str:
-    art = ascii_art(portrait, 98, 106)
+    art = ascii_art(portrait, 84, 94)
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1180" viewBox="0 0 720 1180" role="img" aria-labelledby="title description">
 <title id="title">Omar Arafa — Full Stack PHP Developer</title>
 <desc id="description">Mobile premium terminal card with a large, full-frame ASCII portrait of Omar Arafa.</desc>
@@ -185,7 +188,7 @@ def mobile_svg(portrait: Image.Image) -> str:
   <filter id="nameGlow" x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   <style>
     .mono,.ascii,.key,.value,.sec,.foot{{font-family:'Courier New',Consolas,monospace}}
-    .ascii{{font-size:6.25px;letter-spacing:-.18px;fill:url(#ascii)}}
+    .ascii{{font-size:7.6px;letter-spacing:-.22px;fill:url(#ascii)}}
     .key{{font-size:15px;font-weight:700;fill:#58A6FF}}.value{{font-size:15px;font-weight:700;fill:#F0F6FC}}
     .sec{{font-size:11px;font-weight:700;letter-spacing:2.2px;fill:#8B949E}}.foot{{font-size:11px;letter-spacing:1.8px;fill:#8B949E}}
     @keyframes pulse{{0%,100%{{opacity:.45}}50%{{opacity:1}}}}@keyframes scan{{0%{{transform:translateY(-185px);opacity:0}}15%,85%{{opacity:.75}}100%{{transform:translateY(195px);opacity:0}}}}
@@ -202,8 +205,8 @@ def mobile_svg(portrait: Image.Image) -> str:
 <rect x="32" y="144" width="656" height="526" rx="16" fill="url(#panel)" stroke="url(#border)" stroke-opacity=".64"/>
 <text x="50" y="171" class="sec">PORTRAIT / OMAR — COMPLETE FRAME</text><line x1="50" y1="184" x2="670" y2="184" stroke="#21262D"/>
 <g clip-path="url(#portraitClip)"><rect x="50" y="198" width="620" height="438" rx="12" fill="url(#grid)"/><text x="360" y="405" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="105" font-weight="900" letter-spacing="10" fill="#58A6FF" opacity=".025">OMAR</text><ellipse cx="360" cy="414" rx="245" ry="190" fill="url(#halo)"/>
-<text class="ascii" transform="translate(14 0) scale(1.10 1)">{tspans(art, 104, 198, 4.15)}</text><rect x="82" y="366" width="556" height="1.2" fill="url(#blue)" opacity=".56" class="scan"/></g>
-<rect x="50" y="640" width="620" height="18" rx="7" fill="#0B1521" stroke="#1F6FEB" stroke-opacity=".7"/><text x="360" y="653" text-anchor="middle" class="mono" font-size="9.3" font-weight="700" letter-spacing="1.25" fill="#79C0FF">COMPLETE FRAME • HIGH-DETAIL ASCII • VECTOR SHARP</text>
+<text class="ascii" transform="translate(14 0) scale(1.10 1)">{tspans(art, 104, 198, 4.62)}</text><rect x="82" y="366" width="556" height="1.2" fill="url(#blue)" opacity=".56" class="scan"/></g>
+<rect x="50" y="640" width="620" height="18" rx="7" fill="#0B1521" stroke="#1F6FEB" stroke-opacity=".7"/><text x="360" y="653" text-anchor="middle" class="mono" font-size="9.3" font-weight="700" letter-spacing="1.25" fill="#79C0FF">COMPLETE FRAME • CLEAN ASCII • GITHUB OPTIMIZED</text>
 
 <rect x="32" y="690" width="656" height="398" rx="16" fill="url(#panel)" stroke="url(#border)" stroke-opacity=".55"/>
 <text x="50" y="718" class="sec">PROFILE / ENGINEER</text><line x1="50" y1="731" x2="670" y2="731" stroke="#21262D"/>
@@ -225,8 +228,8 @@ def mobile_svg(portrait: Image.Image) -> str:
 def main() -> None:
     portrait = isolate_portrait(download_avatar())
     files = {
-        "omar-profile-v7.svg": desktop_svg(portrait),
-        "omar-profile-v7-mobile.svg": mobile_svg(portrait),
+        "omar-profile-v8.svg": desktop_svg(portrait),
+        "omar-profile-v8-mobile.svg": mobile_svg(portrait),
     }
     for name, contents in files.items():
         (OUT / name).write_text(contents, encoding="utf-8")

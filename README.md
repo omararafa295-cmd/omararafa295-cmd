@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(max-width: 760px)" srcset="./assets/hero/omar-profile-v7-mobile.svg">
-    <img src="./assets/hero/omar-profile-v7.svg" alt="Omar Arafa, Full Stack PHP Developer" width="100%">
+    <source media="(max-width: 760px)" srcset="./assets/hero/omar-profile-v8-mobile.svg">
+    <img src="./assets/hero/omar-profile-v8.svg" alt="Omar Arafa, Full Stack PHP Developer" width="100%">
   </picture>
 </p>
 
