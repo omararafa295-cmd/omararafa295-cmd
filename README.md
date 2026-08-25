@@ -11,7 +11,7 @@
   <img src="https://img.shields.io/badge/Portfolio-0D1117?style=for-the-badge&logo=googlechrome&logoColor=58A6FF" alt="Portfolio" />
 </a>
 <a href="https://linkedin.com/in/omar-arafa-641504358/">
-  <img src="https://img.shields.io/badge/LinkedIn-0D1117?style=for-the-badge&logo=linkedin&logoColor=58A6FF" alt="LinkedIn" />
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
 </a>
 <a href="mailto:omararafa294@gmail.com">
   <img src="https://img.shields.io/badge/Email-0D1117?style=for-the-badge&logo=gmail&logoColor=58A6FF" alt="Email" />
@@ -67,7 +67,7 @@ class OmarArafa implements FullStackInterface, ControlSystemsInterface
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=php,laravel,mysql,html,css,js,bootstrap,git,github,vscode,arduino&theme=dark" alt="Tech Stack" />
+<img src="https://skillicons.dev/icons?i=php,laravel,mysql,html,css,js,react,bootstrap,git,github,vscode,arduino&theme=dark" alt="Tech Stack" />
 
 </div>
 
@@ -80,7 +80,7 @@ class OmarArafa implements FullStackInterface, ControlSystemsInterface
   </tr>
   <tr>
     <td><b>Frontend</b></td>
-    <td>HTML • CSS • JavaScript • Bootstrap</td>
+    <td>HTML • CSS • JavaScript • React • Bootstrap</td>
   </tr>
   <tr>
     <td><b>Architecture</b></td>
@@ -118,7 +118,7 @@ class OmarArafa implements FullStackInterface, ControlSystemsInterface
 <div align="center">
 
 <a href="https://github.com/omararafa295-cmd/xero-office-ecommerce"><img src="https://img.shields.io/badge/Xero_Office-0D1117?style=for-the-badge&logo=laravel&logoColor=58A6FF" alt="Xero Office" /></a>
-<a href="https://github.com/omararafa295-cmd/Reservations-Monitor-Bot"><img src="https://img.shields.io/badge/Reservations_Bot-0D1117?style=for-the-badge&logo=nodedotjs&logoColor=58A6FF" alt="Reservations Monitor Bot" /></a>
+<a href="https://github.com/omararafa295-cmd/Reservations-Monitor-Bot"><img src="https://img.shields.io/badge/Reservations_Bot-0D1117?style=for-the-badge&logo=python&logoColor=58A6FF" alt="Reservations Monitor Bot" /></a>
 <a href="https://github.com/omararafa295-cmd/iqraa-quran-app"><img src="https://img.shields.io/badge/Iqraa-0D1117?style=for-the-badge&logo=github&logoColor=58A6FF" alt="Iqraa" /></a>
 <a href="https://github.com/omararafa295-cmd/laravel-blog"><img src="https://img.shields.io/badge/Laravel_Blog-0D1117?style=for-the-badge&logo=laravel&logoColor=58A6FF" alt="Laravel Blog" /></a>
 

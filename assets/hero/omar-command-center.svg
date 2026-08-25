@@ -107,7 +107,7 @@
     <g class="mono" font-size="11" font-weight="700" letter-spacing="1">
       <g transform="translate(742 192)"><rect class="node" width="140" height="50" rx="13"/><circle cx="19" cy="25" r="5" fill="#FF2D20"/><text x="34" y="22" fill="#F0F6FC">BACKEND</text><text x="34" y="37" fill="#8B949E" font-size="9">PHP / LARAVEL</text></g>
       <g transform="translate(1112 192)"><rect class="node" width="96" height="50" rx="13"/><circle cx="17" cy="25" r="5" fill="#58A6FF"/><text x="30" y="22" fill="#F0F6FC">DATA</text><text x="30" y="37" fill="#8B949E" font-size="9">MYSQL</text></g>
-      <g transform="translate(742 386)"><rect class="node" width="140" height="50" rx="13"/><circle cx="19" cy="25" r="5" fill="#7C5CFC"/><text x="34" y="22" fill="#F0F6FC">INTERFACE</text><text x="34" y="37" fill="#8B949E" font-size="9">JS / BOOTSTRAP</text></g>
+      <g transform="translate(742 386)"><rect class="node" width="140" height="50" rx="13"/><circle cx="19" cy="25" r="5" fill="#7C5CFC"/><text x="34" y="22" fill="#F0F6FC">INTERFACE</text><text x="34" y="37" fill="#8B949E" font-size="9">REACT / JS</text></g>
       <g transform="translate(1092 386)"><rect class="node" width="116" height="50" rx="13"/><circle cx="18" cy="25" r="5" fill="#3FB950"/><text x="32" y="22" fill="#F0F6FC">EMBEDDED</text><text x="32" y="37" fill="#8B949E" font-size="9">MCU / IOT</text></g>
     </g>
   </g>
