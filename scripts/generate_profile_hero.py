@@ -1,64 +1,237 @@
 #!/usr/bin/env python3
-import io, urllib.request
+"""Generate the responsive v7 terminal hero used by the profile README."""
+
+from __future__ import annotations
+
+import io
+import urllib.request
 from pathlib import Path
 from xml.sax.saxutils import escape
-from PIL import Image, ImageEnhance, ImageFilter, ImageOps
 
-ROOT=Path(__file__).resolve().parents[1]; OUT=ROOT/'assets/hero'; OUT.mkdir(parents=True,exist_ok=True)
-URL='https://avatars.githubusercontent.com/u/228095676?v=4&size=1024'; CH=' .:-=+*#%@'
-INFO=[('Name','Omar Arafa'),('Role','Full Stack PHP Developer'),('Based','Egypt'),('Major','Computer & Systems Engineering'),('University','Zagazig University'),('', ''),('BUILD.FOCUS',''),('Backend','PHP / Laravel / REST APIs / MySQL'),('Frontend','HTML / CSS / JavaScript / Bootstrap'),('Architecture','MVC / Service-Oriented'),('Hardware','PID / Sensors / Microcontrollers / IoT'),('Toolchain','Git / GitHub / VS Code / Arduino')]
-PAL={'dark':('#0D1117','#161B22','#F0F6FC','#8B949E','#58A6FF','#79C0FF','#30363D'),'light':('#F6F8FA','#FFFFFF','#1F2328','#656D76','#0969DA','#218BFF','#D0D7DE')}
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageOps
 
-def avatar():
-    r=urllib.request.Request(URL,headers={'User-Agent':'profile-hero'}); im=Image.open(io.BytesIO(urllib.request.urlopen(r,timeout=30).read())).convert('RGB')
-    im=ImageOps.fit(im,(900,900),Image.Resampling.LANCZOS,centering=(.5,.43)); im=ImageOps.grayscale(im)
-    im=ImageEnhance.Contrast(im).enhance(1.42); im=ImageEnhance.Brightness(im).enhance(1.04)
-    return im.filter(ImageFilter.UnsharpMask(1.4,140,2))
 
-def art(im,cols,rows):
-    a=im.resize((cols,rows),Image.Resampling.LANCZOS); e=a.filter(ImageFilter.FIND_EDGES); p=a.load(); q=e.load(); out=[]
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "assets" / "hero"
+OUT.mkdir(parents=True, exist_ok=True)
+
+AVATAR_URL = "https://avatars.githubusercontent.com/u/228095676?v=4&size=1024"
+ASCII_RAMP = " .`,:;i1tfLCG08@"
+
+
+def download_avatar() -> Image.Image:
+    request = urllib.request.Request(
+        AVATAR_URL,
+        headers={"User-Agent": "omar-profile-hero-generator"},
+    )
+    with urllib.request.urlopen(request, timeout=30) as response:
+        return Image.open(io.BytesIO(response.read())).convert("RGB")
+
+
+def isolate_portrait(image: Image.Image) -> Image.Image:
+    """Keep the complete portrait while muting the busy photo background."""
+    image = ImageOps.fit(
+        image,
+        (920, 920),
+        method=Image.Resampling.LANCZOS,
+        centering=(0.5, 0.5),
+    )
+
+    # The GitHub avatar is a stable square portrait. This soft silhouette follows
+    # the full visible figure from the cap down to the bottom of the photo.
+    polygon = [
+        (300, 0), (485, 0), (535, 72), (555, 155), (540, 264),
+        (512, 302), (584, 332), (655, 382), (686, 470), (677, 568),
+        (652, 635), (626, 640), (610, 920), (274, 920), (232, 845),
+        (208, 720), (190, 575), (182, 458), (199, 390), (256, 337),
+        (316, 302), (292, 245), (286, 157),
+    ]
+    mask = Image.new("L", image.size, 0)
+    ImageDraw.Draw(mask).polygon(polygon, fill=255)
+    mask = mask.filter(ImageFilter.GaussianBlur(10))
+
+    gray = ImageOps.grayscale(image)
+    gray = ImageOps.autocontrast(gray, cutoff=(0.6, 0.8))
+    gray = ImageEnhance.Contrast(gray).enhance(1.55)
+    gray = ImageEnhance.Brightness(gray).enhance(1.05)
+    gray = gray.filter(ImageFilter.UnsharpMask(radius=1.25, percent=165, threshold=2))
+
+    clean = Image.new("L", image.size, 255)
+    clean.paste(gray, mask=mask)
+    return clean
+
+
+def ascii_art(image: Image.Image, columns: int, rows: int) -> list[str]:
+    sample = image.resize((columns, rows), Image.Resampling.LANCZOS)
+    edges = sample.filter(ImageFilter.FIND_EDGES)
+    pixels = sample.load()
+    edge_pixels = edges.load()
+    lines: list[str] = []
+
     for y in range(rows):
-        s=''
-        for x in range(cols):
-            v=max(0,min(1,(255-p[x,y])/255*1.06+q[x,y]/255*.22-.05)); s+=CH[round(v*(len(CH)-1))]
-        out.append(s)
-    return out
+        line = []
+        for x in range(columns):
+            darkness = (255 - pixels[x, y]) / 255
+            edge = 0.0 if x in (0, columns - 1) or y in (0, rows - 1) else edge_pixels[x, y] / 255
+            edge_detail = edge * 0.22 * min(1.0, darkness * 3.0)
+            density = max(
+                0.0,
+                min(1.0, (darkness ** 1.35) * 1.08 + edge_detail - 0.04),
+            )
+            index = round(density * (len(ASCII_RAMP) - 1))
+            line.append(ASCII_RAMP[index])
+        lines.append("".join(line).rstrip())
 
-def text_art(lines,x,y,lh):
-    return '\n'.join(f'<tspan x="{x}" y="{y+i*lh:.2f}" xml:space="preserve">{escape(s)}</tspan>' for i,s in enumerate(lines))
+    non_empty = [index for index, line in enumerate(lines) if line.strip()]
+    if not non_empty:
+        return lines
+    return lines[non_empty[0] : non_empty[-1] + 1]
 
-def info_rows(x,y,lh,c,mobile):
-    primary,muted,accent=c[2],c[3],c[4]; out=[f'<text x="{x}" y="{y}" class="head"><tspan fill="{primary}">omar@developer</tspan><tspan fill="{muted}"> --------------------------</tspan></text>']; i=1
-    for k,v in INFO:
-        if not k: i+=.65; continue
-        yy=y+i*lh
-        if k=='BUILD.FOCUS': out.append(f'<text x="{x}" y="{yy:.1f}" class="row sec" fill="{accent}">- BUILD.FOCUS --------------------</text>')
-        else:
-            vx=x+(126 if mobile else 134); out.append(f'<text x="{x}" y="{yy:.1f}" class="row"><tspan class="key" fill="{accent}">{escape(k)}:</tspan><tspan x="{vx}" fill="{primary}">{escape(v)}</tspan></text>')
-        i+=1
-    out.append(f'<text x="{x}" y="{y+i*lh+3:.1f}" class="foot" fill="{muted}">BRIDGING SOFTWARE &amp; HARDWARE</text>')
-    return '\n'.join(out)
 
-def svg(im,theme,mobile=False):
-    bg0,bg1,primary,muted,accent,accent2,border=PAL[theme]
-    if mobile:
-        W,H=720,1080; tb=(20,20,680,42); vp=(48,94,624,350); ip=(48,470,624,526); clip=(58,122,604,312); ap=(84,54,180,132,5.7,6.6); sx,sy,slh=72,520,28; vt=(66,116); it=(66,492); fy=1045
-    else:
-        W,H=1180,610; tb=(3,3,1174,34); vp=(14,64,488,468); ip=(508,48,655,500); clip=(24,82,470,438); ap=(96,64,78,90,6.65,6.5); sx,sy,slh=528,82,21.5; vt=(30,62); it=(524,62); fy=585
-    cols,rows,ax,ay,alh,afs=ap; px,py,pw,ph=clip; cx=px+pw*.52; cy=py+ph*(.43 if mobile else .48); rx=pw*(.36 if mobile else .45); ry=ph*(.24 if mobile else .29)
-    tx,ty,tw,th=tb; vx,vy,vw,vh=vp; ix,iy,iw,ih=ip
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="title description">
-<title id="title">Omar Arafa - Full Stack PHP Developer</title><desc id="description">Terminal profile card with a static ASCII portrait generated from Omar's GitHub profile photo.</desc>
-<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="{bg0}"/><stop offset="1" stop-color="{bg1}"/></linearGradient><linearGradient id="ascii" x2="1" y2="1"><stop stop-color="{primary}"/><stop offset="1" stop-color="{accent2}"/></linearGradient><linearGradient id="bd"><stop stop-color="{muted}"/><stop offset=".48" stop-color="{accent}"/><stop offset="1" stop-color="{muted}"/></linearGradient><radialGradient id="halo"><stop stop-color="{accent}" stop-opacity=".13"/><stop offset="1" stop-color="{accent}" stop-opacity="0"/></radialGradient><pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="{muted}" opacity=".09"/></pattern><clipPath id="pc"><rect x="{px}" y="{py}" width="{pw}" height="{ph}" rx="12"/></clipPath><style>.mono,.ascii,.pt,.term,.live,.head,.row,.foot{{font-family:'Courier New',Consolas,monospace}}.ascii{{font-size:{afs}px;letter-spacing:-.15px;fill:url(#ascii)}}.pt{{font-size:{13 if mobile else 11}px;letter-spacing:2px;fill:{primary};opacity:.78}}.term{{font-size:{14 if mobile else 12}px;fill:{muted}}}.live{{font-size:{12 if mobile else 10}px;fill:{accent};letter-spacing:1px}}.head{{font-size:{17 if mobile else 16}px;font-weight:700}}.row,.foot{{font-size:{15 if mobile else 14}px}}.sec,.key{{font-weight:700}}text,tspan{{white-space:pre}}.orbit{{transform-box:view-box}}@keyframes a{{to{{transform:rotate(360deg)}}}}@keyframes b{{to{{transform:rotate(-360deg)}}}}@media(prefers-reduced-motion:no-preference){{.o1{{animation:a 42s linear infinite}}.o2{{animation:b 34s linear infinite}}}}</style></defs>
-<rect width="{W}" height="{H}" rx="{22 if mobile else 18}" fill="url(#bg)"/><rect x="{tx}" y="{ty}" width="{tw}" height="{th}" rx="{14 if mobile else 16}" fill="{bg1}" opacity=".9"/><circle cx="{tx+21}" cy="{ty+(21 if mobile else 17)}" r="5" fill="{accent}"/><circle cx="{tx+39}" cy="{ty+(21 if mobile else 17)}" r="5" fill="{muted}"/><circle cx="{tx+57}" cy="{ty+(21 if mobile else 17)}" r="5" fill="{muted}"/><text x="{W/2}" y="{47 if mobile else 25}" text-anchor="middle" class="term">omar@developer ~ % ./profile</text><circle cx="{571 if mobile else 1039}" cy="{41 if mobile else 20}" r="4" fill="{accent}"/><text x="{584 if mobile else 1049}" y="{45 if mobile else 24}" class="live">BUILDING</text>
-<rect x="{vx}" y="{vy}" width="{vw}" height="{vh}" rx="14" fill="{bg1}" opacity=".42" stroke="url(#bd)" stroke-opacity=".45"/><rect x="{ix}" y="{iy}" width="{iw}" height="{ih}" rx="14" fill="{bg1}" opacity=".46" stroke="url(#bd)" stroke-opacity=".45"/><text x="{vt[0]}" y="{vt[1]}" class="pt">PORTRAIT / OMAR</text><text x="{it[0]}" y="{it[1]}" class="pt">PROFILE / ENGINEER</text>
-<g clip-path="url(#pc)"><rect x="{px}" y="{py}" width="{pw}" height="{ph}" fill="url(#grid)"/><ellipse cx="{cx:.1f}" cy="{cy:.1f}" rx="{rx:.1f}" ry="{ry:.1f}" fill="url(#halo)"/><ellipse class="orbit o1" style="transform-origin:{cx:.1f}px {cy:.1f}px" cx="{cx:.1f}" cy="{cy:.1f}" rx="{rx:.1f}" ry="{ry:.1f}" fill="none" stroke="{primary}" stroke-dasharray="3 14" opacity=".13"/><ellipse class="orbit o2" style="transform-origin:{cx:.1f}px {cy:.1f}px" cx="{cx:.1f}" cy="{cy:.1f}" rx="{rx*.78:.1f}" ry="{ry*.76:.1f}" fill="none" stroke="{muted}" stroke-dasharray="28 24" opacity=".1"/><text class="ascii">{text_art(art(im,cols,rows),ax,ay,alh)}</text></g>
-{info_rows(sx,sy,slh,(bg0,bg1,primary,muted,accent,accent2,border),mobile)}
-<text x="{W/2}" y="{fy}" text-anchor="middle" class="mono" font-family="'Courier New',Consolas,monospace" font-size="{13 if mobile else 11}" font-weight="700" letter-spacing="2" fill="{muted}">PHP / LARAVEL / MYSQL / JAVASCRIPT / EMBEDDED SYSTEMS / IOT</text></svg>'''
+def tspans(lines: list[str], x: float, y: float, line_height: float) -> str:
+    return "\n".join(
+        f'<tspan x="{x}" y="{y + index * line_height:.2f}" '
+        f'xml:space="preserve">{escape(line)}</tspan>'
+        for index, line in enumerate(lines)
+    )
 
-def main():
-    im=avatar()
-    for theme in ('dark','light'):
-        for mobile in (False,True):
-            name=f"omar-profile-v3{'-mobile' if mobile else ''}-{theme}.svg"; (OUT/name).write_text(svg(im,theme,mobile),encoding='utf-8'); print(name)
-if __name__=='__main__': main()
+
+def desktop_svg(portrait: Image.Image) -> str:
+    art = ascii_art(portrait, 112, 106)
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="735" viewBox="0 0 1280 735" role="img" aria-labelledby="title description">
+<title id="title">Omar Arafa — Full Stack PHP Developer</title>
+<desc id="description">Large premium terminal card with a high-detail, full-frame ASCII portrait of Omar Arafa.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0D1117"/><stop offset="1" stop-color="#07111E"/></linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#111A25" stop-opacity=".94"/><stop offset="1" stop-color="#0B141F" stop-opacity=".96"/></linearGradient>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#A5D6FF"/><stop offset=".48" stop-color="#58A6FF"/><stop offset="1" stop-color="#2F81F7"/></linearGradient>
+  <linearGradient id="ascii" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#FFFFFF"/><stop offset=".48" stop-color="#E6EDF3"/><stop offset="1" stop-color="#79C0FF"/></linearGradient>
+  <linearGradient id="border" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#30363D"/><stop offset=".5" stop-color="#58A6FF"/><stop offset="1" stop-color="#30363D"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#58A6FF" stop-opacity=".16"/><stop offset="1" stop-color="#58A6FF" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#58A6FF" stroke-opacity=".05"/></pattern>
+  <clipPath id="portraitClip"><rect x="42" y="196" width="526" height="420" rx="12"/></clipPath>
+  <filter id="nameGlow" x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <style>
+    .mono,.ascii,.tiny,.key,.value,.sec,.foot{{font-family:'Courier New',Consolas,monospace}}
+    .ascii{{font-size:5.35px;letter-spacing:-.18px;fill:url(#ascii)}}
+    .tiny{{font-size:11px;letter-spacing:2px;fill:#8B949E}}
+    .key{{font-size:15px;font-weight:700;fill:#58A6FF}}
+    .value{{font-size:15px;font-weight:700;fill:#F0F6FC}}
+    .sec{{font-size:11px;font-weight:700;letter-spacing:2.2px;fill:#8B949E}}
+    .foot{{font-size:11px;letter-spacing:1.8px;fill:#8B949E}}
+    @keyframes pulse{{0%,100%{{opacity:.45}}50%{{opacity:1}}}}
+    @keyframes scan{{0%{{transform:translateY(-178px);opacity:0}}15%,85%{{opacity:.75}}100%{{transform:translateY(190px);opacity:0}}}}
+    .pulse{{animation:pulse 2.2s ease-in-out infinite}}.scan{{animation:scan 6.2s linear infinite}}
+  </style>
+</defs>
+<rect width="1280" height="735" rx="24" fill="url(#bg)"/>
+<rect x="5" y="5" width="1270" height="725" rx="21" fill="none" stroke="#30363D"/>
+<text x="640" y="42" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="800" letter-spacing="6" fill="url(#blue)" filter="url(#nameGlow)">OMAR ARAFA</text>
+<text x="640" y="62" text-anchor="middle" class="mono" font-size="9.5" font-weight="700" letter-spacing="2.6" fill="#79C0FF">FULL STACK PHP DEVELOPER • COMPUTER &amp; SYSTEMS ENGINEER</text>
+<rect x="22" y="78" width="1236" height="44" rx="12" fill="#101823" stroke="#21262D"/>
+<circle cx="47" cy="100" r="5" fill="#FF7B72"/><circle cx="65" cy="100" r="5" fill="#D29922"/><circle cx="83" cy="100" r="5" fill="#3FB950"/>
+<text x="113" y="104" class="mono" font-size="12" fill="#8B949E">omar@developer ~ % ./profile --full-frame</text>
+<circle cx="1142" cy="100" r="4.5" fill="#58A6FF" class="pulse"/><text x="1157" y="104" class="mono" font-size="10" font-weight="700" letter-spacing="2" fill="#58A6FF">BUILDING</text>
+
+<rect x="22" y="138" width="566" height="514" rx="16" fill="url(#panel)" stroke="url(#border)" stroke-opacity=".64"/>
+<rect x="602" y="138" width="656" height="514" rx="16" fill="url(#panel)" stroke="url(#border)" stroke-opacity=".55"/>
+<text x="42" y="164" class="sec">PORTRAIT / OMAR — COMPLETE FRAME</text><text x="622" y="164" class="sec">PROFILE / ENGINEER</text>
+<line x1="42" y1="176" x2="568" y2="176" stroke="#21262D"/><line x1="622" y1="176" x2="1238" y2="176" stroke="#21262D"/>
+
+<g clip-path="url(#portraitClip)">
+  <rect x="42" y="196" width="526" height="420" rx="12" fill="url(#grid)"/>
+  <text x="305" y="392" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="96" font-weight="900" letter-spacing="10" fill="#58A6FF" opacity=".025">OMAR</text>
+  <ellipse cx="305" cy="405" rx="218" ry="180" fill="url(#halo)"/>
+  <text class="ascii" transform="translate(4 0) scale(1.07 1)">{tspans(art, 118, 194, 4.02)}</text>
+  <rect x="72" y="358" width="466" height="1.2" fill="url(#blue)" opacity=".56" class="scan"/>
+</g>
+<rect x="42" y="619" width="526" height="18" rx="7" fill="#0B1521" stroke="#1F6FEB" stroke-opacity=".7"/>
+<text x="305" y="632" text-anchor="middle" class="mono" font-size="9.3" font-weight="700" letter-spacing="1.35" fill="#79C0FF">COMPLETE FRAME • 112-COLUMN ASCII • VECTOR SHARP</text>
+
+<text x="622" y="211" class="mono" font-size="15" font-weight="700" fill="#F0F6FC">omararafa295-cmd</text>
+<text x="622" y="251" class="key">Name:</text><text x="780" y="251" class="value">Omar Arafa</text>
+<text x="622" y="284" class="key">Role:</text><text x="780" y="284" class="value">Full Stack PHP Developer</text>
+<text x="622" y="317" class="key">Major:</text><text x="780" y="317" class="value">Computer &amp; Systems Engineering</text>
+<text x="622" y="350" class="key">University:</text><text x="780" y="350" class="value">Zagazig University</text>
+<text x="622" y="383" class="key">Based:</text><text x="780" y="383" class="value">Egypt</text>
+<line x1="622" y1="407" x2="1238" y2="407" stroke="#21262D"/>
+<text x="622" y="431" class="sec">BUILD.FOCUS</text>
+<text x="622" y="468" class="key">Backend:</text><text x="780" y="468" class="value">PHP / Laravel / RESTful APIs / MySQL</text>
+<text x="622" y="501" class="key">Frontend:</text><text x="780" y="501" class="value">HTML / CSS / JavaScript / Bootstrap</text>
+<text x="622" y="534" class="key">Architecture:</text><text x="780" y="534" class="value">MVC / Service-Oriented Design</text>
+<text x="622" y="567" class="key">Hardware:</text><text x="780" y="567" class="value">PID / Sensors / Microcontrollers / IoT</text>
+<text x="622" y="600" class="key">Toolchain:</text><text x="780" y="600" class="value">Git / GitHub / VS Code / Arduino</text>
+
+<rect x="22" y="670" width="1236" height="40" rx="10" fill="#0E1621" stroke="#21262D"/>
+<rect x="22" y="670" width="1236" height="1.5" fill="url(#blue)" opacity=".8"/>
+<text x="640" y="695" text-anchor="middle" class="foot">PHP / LARAVEL / MYSQL / JAVASCRIPT / BOOTSTRAP / EMBEDDED SYSTEMS / IOT</text>
+</svg>'''
+
+
+def mobile_svg(portrait: Image.Image) -> str:
+    art = ascii_art(portrait, 98, 106)
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1180" viewBox="0 0 720 1180" role="img" aria-labelledby="title description">
+<title id="title">Omar Arafa — Full Stack PHP Developer</title>
+<desc id="description">Mobile premium terminal card with a large, full-frame ASCII portrait of Omar Arafa.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0D1117"/><stop offset="1" stop-color="#07111E"/></linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#111A25"/><stop offset="1" stop-color="#0B141F"/></linearGradient>
+  <linearGradient id="blue"><stop stop-color="#A5D6FF"/><stop offset=".5" stop-color="#58A6FF"/><stop offset="1" stop-color="#2F81F7"/></linearGradient>
+  <linearGradient id="ascii" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#FFFFFF"/><stop offset=".48" stop-color="#E6EDF3"/><stop offset="1" stop-color="#79C0FF"/></linearGradient>
+  <linearGradient id="border"><stop stop-color="#30363D"/><stop offset=".5" stop-color="#58A6FF"/><stop offset="1" stop-color="#30363D"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#58A6FF" stop-opacity=".16"/><stop offset="1" stop-color="#58A6FF" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#58A6FF" stroke-opacity=".05"/></pattern>
+  <clipPath id="portraitClip"><rect x="50" y="198" width="620" height="438" rx="12"/></clipPath>
+  <filter id="nameGlow" x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <style>
+    .mono,.ascii,.key,.value,.sec,.foot{{font-family:'Courier New',Consolas,monospace}}
+    .ascii{{font-size:6.25px;letter-spacing:-.18px;fill:url(#ascii)}}
+    .key{{font-size:15px;font-weight:700;fill:#58A6FF}}.value{{font-size:15px;font-weight:700;fill:#F0F6FC}}
+    .sec{{font-size:11px;font-weight:700;letter-spacing:2.2px;fill:#8B949E}}.foot{{font-size:11px;letter-spacing:1.8px;fill:#8B949E}}
+    @keyframes pulse{{0%,100%{{opacity:.45}}50%{{opacity:1}}}}@keyframes scan{{0%{{transform:translateY(-185px);opacity:0}}15%,85%{{opacity:.75}}100%{{transform:translateY(195px);opacity:0}}}}
+    .pulse{{animation:pulse 2.2s ease-in-out infinite}}.scan{{animation:scan 6.2s linear infinite}}
+  </style>
+</defs>
+<rect width="720" height="1180" rx="24" fill="url(#bg)"/><rect x="5" y="5" width="710" height="1170" rx="21" fill="none" stroke="#30363D"/>
+<text x="360" y="43" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="800" letter-spacing="6" fill="url(#blue)" filter="url(#nameGlow)">OMAR ARAFA</text>
+<text x="360" y="63" text-anchor="middle" class="mono" font-size="9.5" font-weight="700" letter-spacing="2.3" fill="#79C0FF">FULL STACK PHP DEVELOPER • SYSTEMS ENGINEER</text>
+<rect x="24" y="80" width="672" height="44" rx="12" fill="#101823" stroke="#21262D"/>
+<circle cx="48" cy="102" r="5" fill="#FF7B72"/><circle cx="66" cy="102" r="5" fill="#D29922"/><circle cx="84" cy="102" r="5" fill="#3FB950"/>
+<text x="108" y="106" class="mono" font-size="11" fill="#8B949E">omar@developer ~ % ./profile</text><circle cx="602" cy="102" r="4.5" fill="#58A6FF" class="pulse"/><text x="617" y="106" class="mono" font-size="9" font-weight="700" letter-spacing="1.5" fill="#58A6FF">BUILDING</text>
+
+<rect x="32" y="144" width="656" height="526" rx="16" fill="url(#panel)" stroke="url(#border)" stroke-opacity=".64"/>
+<text x="50" y="171" class="sec">PORTRAIT / OMAR — COMPLETE FRAME</text><line x1="50" y1="184" x2="670" y2="184" stroke="#21262D"/>
+<g clip-path="url(#portraitClip)"><rect x="50" y="198" width="620" height="438" rx="12" fill="url(#grid)"/><text x="360" y="405" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="105" font-weight="900" letter-spacing="10" fill="#58A6FF" opacity=".025">OMAR</text><ellipse cx="360" cy="414" rx="245" ry="190" fill="url(#halo)"/>
+<text class="ascii" transform="translate(14 0) scale(1.10 1)">{tspans(art, 104, 198, 4.15)}</text><rect x="82" y="366" width="556" height="1.2" fill="url(#blue)" opacity=".56" class="scan"/></g>
+<rect x="50" y="640" width="620" height="18" rx="7" fill="#0B1521" stroke="#1F6FEB" stroke-opacity=".7"/><text x="360" y="653" text-anchor="middle" class="mono" font-size="9.3" font-weight="700" letter-spacing="1.25" fill="#79C0FF">COMPLETE FRAME • HIGH-DETAIL ASCII • VECTOR SHARP</text>
+
+<rect x="32" y="690" width="656" height="398" rx="16" fill="url(#panel)" stroke="url(#border)" stroke-opacity=".55"/>
+<text x="50" y="718" class="sec">PROFILE / ENGINEER</text><line x1="50" y1="731" x2="670" y2="731" stroke="#21262D"/>
+<text x="50" y="763" class="mono" font-size="15" font-weight="700" fill="#F0F6FC">omararafa295-cmd</text>
+<text x="50" y="800" class="key">Name:</text><text x="210" y="800" class="value">Omar Arafa</text>
+<text x="50" y="829" class="key">Role:</text><text x="210" y="829" class="value">Full Stack PHP Developer</text>
+<text x="50" y="858" class="key">Major:</text><text x="210" y="858" class="value">Computer &amp; Systems Engineering</text>
+<text x="50" y="887" class="key">University:</text><text x="210" y="887" class="value">Zagazig University</text>
+<text x="50" y="916" class="key">Based:</text><text x="210" y="916" class="value">Egypt</text>
+<line x1="50" y1="939" x2="670" y2="939" stroke="#21262D"/><text x="50" y="963" class="sec">BUILD.FOCUS</text>
+<text x="50" y="995" class="key">Backend:</text><text x="210" y="995" class="value">PHP / Laravel / APIs / MySQL</text>
+<text x="50" y="1024" class="key">Frontend:</text><text x="210" y="1024" class="value">HTML / CSS / JS / Bootstrap</text>
+<text x="50" y="1053" class="key">Toolchain:</text><text x="210" y="1053" class="value">Git / GitHub / VS Code / Arduino</text>
+
+<rect x="24" y="1110" width="672" height="42" rx="10" fill="#0E1621" stroke="#21262D"/><rect x="24" y="1110" width="672" height="1.5" fill="url(#blue)" opacity=".8"/><text x="360" y="1136" text-anchor="middle" class="foot">PHP / LARAVEL / MYSQL / JAVASCRIPT / EMBEDDED SYSTEMS / IOT</text>
+</svg>'''
+
+
+def main() -> None:
+    portrait = isolate_portrait(download_avatar())
+    files = {
+        "omar-profile-v7.svg": desktop_svg(portrait),
+        "omar-profile-v7-mobile.svg": mobile_svg(portrait),
+    }
+    for name, contents in files.items():
+        (OUT / name).write_text(contents, encoding="utf-8")
+        print(name)
+
+
+if __name__ == "__main__":
+    main()
