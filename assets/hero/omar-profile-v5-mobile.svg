@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1120" viewBox="0 0 720 1120" role="img" aria-labelledby="title description">
+<title id="title">Omar Arafa - Full Stack PHP Developer</title><desc id="description">Responsive premium terminal profile card with a full-body ASCII portrait.</desc>
+<defs>
+<linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0D1117"/><stop offset="1" stop-color="#071321"/></linearGradient>
+<linearGradient id="panel" x2="0" y2="1"><stop stop-color="#111923"/><stop offset="1" stop-color="#0C141F"/></linearGradient>
+<linearGradient id="ascii" x2="1" y2="1"><stop stop-color="#79C0FF"/><stop offset=".55" stop-color="#58A6FF"/><stop offset="1" stop-color="#F0F6FC"/></linearGradient>
+<pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#58A6FF" opacity=".055"/></pattern>
+<clipPath id="pc"><rect x="58" y="150" width="604" height="430" rx="12"/></clipPath>
+<style>
+.mono,.ascii,.pt,.term,.live,.head,.row,.foot,.brand,.sub{font-family:'Courier New',Consolas,monospace}.ascii{font-size:6.1px;letter-spacing:-.36px;fill:url(#ascii)}.pt{font-size:13px;letter-spacing:2px;fill:#F0F6FC;opacity:.78}.brand{font-size:24px;font-weight:700;fill:#F0F6FC;letter-spacing:2.4px}.sub{font-size:10px;fill:#58A6FF;letter-spacing:1.4px}.term{font-size:11px;fill:#8B949E}.live{font-size:11px;fill:#58A6FF;letter-spacing:1.2px}.head{font-size:18px;font-weight:700;fill:#F0F6FC}.row{font-size:15px;fill:#F0F6FC}.key{font-weight:700;fill:#58A6FF}.foot{font-size:12px;fill:#8B949E}
+</style></defs>
+<rect width="720" height="1120" rx="22" fill="url(#bg)"/><rect x="20" y="20" width="680" height="92" rx="14" fill="#0F1722" stroke="#21262D"/>
+<text x="360" y="54" text-anchor="middle" class="brand">OMAR ARAFA</text><text x="360" y="76" text-anchor="middle" class="sub">FULL STACK PHP DEVELOPER</text><text x="360" y="96" text-anchor="middle" class="term">omar@developer ~ % ./profile --premium</text>
+<rect x="48" y="132" width="624" height="468" rx="14" fill="url(#panel)" stroke="#30363D"/><text x="66" y="156" class="pt">PORTRAIT / OMAR — FULL FRAME</text>
+<g clip-path="url(#pc)"><rect x="58" y="150" width="604" height="430" fill="url(#grid)"/><text class="ascii"><tspan x="216" y="164.00" xml:space="preserve"></tspan>
+<tspan x="216" y="169.00" xml:space="preserve"></tspan>
+<tspan x="216" y="174.00" xml:space="preserve"></tspan>
+<tspan x="216" y="179.00" xml:space="preserve"></tspan>
+<tspan x="216" y="184.00" xml:space="preserve"></tspan>
+<tspan x="216" y="189.00" xml:space="preserve"></tspan>
+<tspan x="216" y="194.00" xml:space="preserve"></tspan>
+<tspan x="216" y="199.00" xml:space="preserve"></tspan>
+<tspan x="216" y="204.00" xml:space="preserve">                                      :=+++-.</tspan>
+<tspan x="216" y="209.00" xml:space="preserve">                                    -#@@@@@@%*:</tspan>
+<tspan x="216" y="214.00" xml:space="preserve">                                  .*@@@@@@@@@@%=</tspan>
+<tspan x="216" y="219.00" xml:space="preserve">                                 :%@@%%%#%%%@@@@=</tspan>
+<tspan x="216" y="224.00" xml:space="preserve">                                .%@%%%#####%%%@@%+-</tspan>
+<tspan x="216" y="229.00" xml:space="preserve">                               :#@@%%###**###%%@@%+</tspan>
+<tspan x="216" y="234.00" xml:space="preserve">                              -***%%%%#****%@@@#+**</tspan>
+<tspan x="216" y="239.00" xml:space="preserve">                             :#++#%%%%%#*#%-.  .-*=</tspan>
+<tspan x="216" y="244.00" xml:space="preserve">                             =%+#@@@@@@%*#%#***##%+</tspan>
+<tspan x="216" y="249.00" xml:space="preserve">                             .#++@@@@@@#+#%@@@@@@*.</tspan>
+<tspan x="216" y="254.00" xml:space="preserve">                             .*++*%@@@#++#*#@@@%*=</tspan>
+<tspan x="216" y="259.00" xml:space="preserve">                              :+***##*+**######**-</tspan>
+<tspan x="216" y="264.00" xml:space="preserve">                             --=***%#++*########*-</tspan>
+<tspan x="216" y="269.00" xml:space="preserve">                            .---=**###*####%%###=</tspan>
+<tspan x="216" y="274.00" xml:space="preserve">                                .+***+*#%%#####+</tspan>
+<tspan x="216" y="279.00" xml:space="preserve">                                 :**++**#######.</tspan>
+<tspan x="216" y="284.00" xml:space="preserve">                                .=+**+*########:</tspan>
+<tspan x="216" y="289.00" xml:space="preserve">                                #*+****#######*#-.</tspan>
+<tspan x="216" y="294.00" xml:space="preserve">                              .-%%++**+*###*#*#@%##+==:.</tspan>
+<tspan x="216" y="299.00" xml:space="preserve">                            :*@**@@#****######@@@#@@@@%%*=.</tspan>
+<tspan x="216" y="304.00" xml:space="preserve">                          -*@@@%*@@@%########%@@@%@@@@@@@@%#=:</tspan>
+<tspan x="216" y="309.00" xml:space="preserve">                       :+%@@@@@@%%@%@%#######%#%@@@@@@@@@@@@@%+:</tspan>
+<tspan x="216" y="314.00" xml:space="preserve">                    .-*@@@%@@@@@@%@@#%##***###+@@@@@@@@@@@@@@@%@=</tspan>
+<tspan x="216" y="319.00" xml:space="preserve">                  :*%@@%@@@@@@@@@@@@%*####%#+=*@@@@@@@@@@@@@@@@@#</tspan>
+<tspan x="216" y="324.00" xml:space="preserve">                .+%%@@%@@@@@@@%@@@@@@#=+**+==+@@@@@@@@@@@@@@@@@@@:</tspan>
+<tspan x="216" y="329.00" xml:space="preserve">              ..*@@@@@@@@@@@@@%@@@@@@@#=+=+++*@@@@@@@@@@@@@@@@@@@-</tspan>
+<tspan x="216" y="334.00" xml:space="preserve">            .#*#@@@@@@@@@@@@@@@@@@@@@@@#++++=%@@@@@@@@@@@@%%@@@@@.</tspan>
+<tspan x="216" y="339.00" xml:space="preserve">            -%*@@@@@@@@@@@@@@@@@@@@@@@@@*++++@@@@@@@@@@@@@%%@@@@@.</tspan>
+<tspan x="216" y="344.00" xml:space="preserve">            .*#@@@@@@@@@@@@@@@@@@@@@@@@@@*++*@@@@@@@@@@@@@#@@@@@@:</tspan>
+<tspan x="216" y="349.00" xml:space="preserve">            .##@@@@@@@@@@@%@@@@@@@@@@@@@@@++%@@@@@@@@@@@@@@@@@@@@-</tspan>
+<tspan x="216" y="354.00" xml:space="preserve">            -@*@@@@@@@@@@%@@@@@@@@@@@@@@@@#+@@@@@@@@@@@@@@@@@@@@@.</tspan>
+<tspan x="216" y="359.00" xml:space="preserve">            +@#@@@@@@@@@@@@@@@@@@@@@@@@@@@@%@@@@@@@@@@@@%%@@@@@@@-</tspan>
+<tspan x="216" y="364.00" xml:space="preserve">            #@%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#%@@@@@@@=</tspan>
+<tspan x="216" y="369.00" xml:space="preserve">           .@@%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#@@@@@@@@+</tspan>
+<tspan x="216" y="374.00" xml:space="preserve">           :@@%%%@@@@@@@@@@%@@@@@@@@@@@@@@@%@@@@@@@@@@@%%@@@@%*+*-</tspan>
+<tspan x="216" y="379.00" xml:space="preserve">           -@@@%%@@@@@@@@@@%@@@@@@@@@@@@@@@@@@@@@@@@@@@@::@@%@#=*:</tspan>
+<tspan x="216" y="384.00" xml:space="preserve">           +@@@@%%@@@@@@@@@%%@@@@@@@@@@@@@@@@@@@@@@@@@@@: +@%%#*#=</tspan>
+<tspan x="216" y="389.00" xml:space="preserve">           *%@@@@%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:  #@%=:-.</tspan>
+<tspan x="216" y="394.00" xml:space="preserve">           #%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%@-  =@@+-+</tspan>
+<tspan x="216" y="399.00" xml:space="preserve">          .%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%@-  *@###@=</tspan>
+<tspan x="216" y="404.00" xml:space="preserve">          :@%@@@@@@@@@@@@%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@. #@%*+=+%-</tspan>
+<tspan x="216" y="409.00" xml:space="preserve">          .%%@@@@@@@@@@@@%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-#@@@%*==-</tspan>
+<tspan x="216" y="414.00" xml:space="preserve">           #%%@@@@@@@@@@@%@@@@@@@@@@@@@@@@@@*@@@@@@@@@@@%@%@%#%##+</tspan>
+<tspan x="216" y="419.00" xml:space="preserve">          +%@@@@@@@@@@@@@%@@@@@@@@@@@@@@@@@@#@@@@@@@@@@@@@%.+#%%%@-</tspan>
+<tspan x="216" y="424.00" xml:space="preserve">         .%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%@@%-#%%%%*.</tspan>
+<tspan x="216" y="429.00" xml:space="preserve">          *@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%@@%+</tspan>
+<tspan x="216" y="434.00" xml:space="preserve">           :-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@##*-:::.</tspan>
+<tspan x="216" y="439.00" xml:space="preserve">            .@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%:</tspan>
+<tspan x="216" y="444.00" xml:space="preserve">            .@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%@@-</tspan>
+<tspan x="216" y="449.00" xml:space="preserve">            .@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%@@=</tspan>
+<tspan x="216" y="454.00" xml:space="preserve">             #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%@@@@@@@@@%@@*</tspan>
+<tspan x="216" y="459.00" xml:space="preserve">             .*#%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%@@*</tspan>
+<tspan x="216" y="464.00" xml:space="preserve">              =#%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%@@*</tspan>
+<tspan x="216" y="469.00" xml:space="preserve">              .*#%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*</tspan>
+<tspan x="216" y="474.00" xml:space="preserve">               -##%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*</tspan>
+<tspan x="216" y="479.00" xml:space="preserve">               .*##%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+</tspan>
+<tspan x="216" y="484.00" xml:space="preserve">                =###%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+</tspan>
+<tspan x="216" y="489.00" xml:space="preserve">                :*##%%%@@@@@@@@@@@@@@@@@@@@@@@+@@@@@@@@@@@-</tspan>
+<tspan x="216" y="494.00" xml:space="preserve">                 +###%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:</tspan>
+<tspan x="216" y="499.00" xml:space="preserve">                 :*##%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-</tspan>
+<tspan x="216" y="504.00" xml:space="preserve">                 .+**%%%@%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-</tspan>
+<tspan x="216" y="509.00" xml:space="preserve">                 :++*%%%@@%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=</tspan>
+<tspan x="216" y="514.00" xml:space="preserve">                 :++###%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=</tspan>
+<tspan x="216" y="519.00" xml:space="preserve">                 -*+*##%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+</tspan>
+<tspan x="216" y="524.00" xml:space="preserve">                 .-*+###%%%%@@@@@@@@@@@@@+%@@@@@@@@@@@@@@@+</tspan>
+<tspan x="216" y="529.00" xml:space="preserve">                   :#%%#####@@@@@@@@@@@@@ :@@@@@@@@@@@@@@@=</tspan>
+<tspan x="216" y="534.00" xml:space="preserve">                    -+#@#%%@@@@@@@@@@@@@*  *@@@@@@@@@@@@@@=</tspan>
+<tspan x="216" y="539.00" xml:space="preserve">                      .:-*@@@@@@@@@@@@@@*  =@@@@@@@@@@@@@@:</tspan>
+<tspan x="216" y="544.00" xml:space="preserve">                          %@@@@@@@@@@@@@=  -@@@@@@@@@@@@@@.</tspan>
+<tspan x="216" y="549.00" xml:space="preserve">                          =@@@@@@@@@@@@@=  .@@@@@@@@@@@@@@</tspan>
+<tspan x="216" y="554.00" xml:space="preserve">                           %@@@@@@@@@@@@=   %@@@@@@@@@@@@%</tspan>
+<tspan x="216" y="559.00" xml:space="preserve">                           *@@@@@@@@@@@@-   -@@@@@@@@@@@@*</tspan>
+<tspan x="216" y="564.00" xml:space="preserve">                           -##********##.    +####******#:</tspan></text></g>
+<rect x="70" y="560" width="580" height="24" rx="8" fill="#0E1622" stroke="#1F6FEB" stroke-opacity=".55"/><text x="360" y="577" text-anchor="middle" class="sub">FULL FRAME • VECTOR ASCII • NO ZOOM</text>
+<rect x="48" y="626" width="624" height="422" rx="14" fill="url(#panel)" stroke="#30363D"/><text x="66" y="652" class="pt">PROFILE / ENGINEER</text><text x="66" y="692" class="head">omararafa295-cmd</text>
+<text x="66" y="730" class="row key">Name:</text><text x="230" y="730" class="row">Omar Arafa</text>
+<text x="66" y="760" class="row key">Role:</text><text x="230" y="760" class="row">Full Stack PHP Developer</text>
+<text x="66" y="790" class="row key">Major:</text><text x="230" y="790" class="row">Computer &amp; Systems Engineering</text>
+<text x="66" y="820" class="row key">University:</text><text x="230" y="820" class="row">Zagazig University</text>
+<text x="66" y="850" class="row key">Based:</text><text x="230" y="850" class="row">Egypt</text>
+<line x1="66" y1="872" x2="654" y2="872" stroke="#21262D"/><text x="66" y="900" class="pt">BUILD.FOCUS</text>
+<text x="66" y="934" class="row key">Backend:</text><text x="230" y="934" class="row">PHP / Laravel / RESTful APIs / MySQL</text>
+<text x="66" y="964" class="row key">Frontend:</text><text x="230" y="964" class="row">HTML / CSS / JS / Bootstrap</text>
+<text x="66" y="994" class="row key">Hardware:</text><text x="230" y="994" class="row">PID / Sensors / MCU / IoT</text>
+<text x="66" y="1024" class="row key">Toolchain:</text><text x="230" y="1024" class="row">Git / GitHub / VS Code / Arduino</text>
+<rect x="48" y="1072" width="624" height="26" rx="8" fill="#0F1622" stroke="#21262D"/><text x="360" y="1090" text-anchor="middle" class="foot">PHP / LARAVEL / MYSQL / JAVASCRIPT / IOT</text>
+</svg>
