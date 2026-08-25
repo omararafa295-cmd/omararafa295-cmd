@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="360" viewBox="0 0 1180 360" role="img" aria-labelledby="title desc">
+<title id="title">Selected Work — Active Builds</title><desc id="desc">Four selected projects from Omar Arafa's GitHub profile.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0D1117"/><stop offset="1" stop-color="#08111D"/></linearGradient>
+ <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#79C0FF"/><stop offset="1" stop-color="#2F81F7"/></linearGradient>
+ <style>.mono,.title,.sub,.name,.desc,.status{font-family:'Courier New',Consolas,monospace}.title{font-size:17px;font-weight:700;letter-spacing:1.6px;fill:#F0F6FC}.sub{font-size:10px;letter-spacing:1.6px;fill:#8B949E}.name{font-size:15px;font-weight:700;fill:#58A6FF}.desc{font-size:10.8px;fill:#F0F6FC}.status{font-size:9.2px;font-weight:700;letter-spacing:1.1px;fill:#3FB950}</style>
+</defs>
+<rect width="1180" height="360" rx="20" fill="url(#bg)"/><rect x="18" y="18" width="1144" height="324" rx="16" fill="#0E1620" stroke="#30363D"/>
+<text x="40" y="54" class="title">SELECTED WORK / ACTIVE BUILDS</text><text x="40" y="80" class="sub">A FEW REPOSITORIES THAT SHOW THE RANGE OF MY WORK</text><rect x="40" y="96" width="1100" height="2" fill="url(#blue)" opacity=".7"/>
+<g>
+ <rect x="40" y="124" width="525" height="92" rx="12" fill="#111A24" stroke="#30363D"/><circle cx="64" cy="150" r="5" fill="#58A6FF"/><text x="84" y="155" class="name">xero-office-ecommerce</text><text x="58" y="184" class="desc">Laravel + Vue 3 / Inertia / MySQL • E-Commerce Platform</text><text x="542" y="204" text-anchor="end" class="status">PUBLIC / ACTIVE</text>
+ <rect x="595" y="124" width="545" height="92" rx="12" fill="#111A24" stroke="#30363D"/><circle cx="619" cy="150" r="5" fill="#58A6FF"/><text x="639" y="155" class="name">Reservations-Monitor-Bot</text><text x="613" y="184" class="desc">Node.js automation • Booking &amp; availability monitoring</text><text x="1118" y="204" text-anchor="end" class="status">PUBLIC / ACTIVE</text>
+ <rect x="40" y="232" width="525" height="92" rx="12" fill="#111A24" stroke="#30363D"/><circle cx="64" cy="258" r="5" fill="#58A6FF"/><text x="84" y="263" class="name">iqraa-quran-app</text><text x="58" y="292" class="desc">Islamic services platform • Qur'an / prayer / content experience</text><text x="542" y="312" text-anchor="end" class="status">PUBLIC / ACTIVE</text>
+ <rect x="595" y="232" width="545" height="92" rx="12" fill="#111A24" stroke="#30363D"/><circle cx="619" cy="258" r="5" fill="#58A6FF"/><text x="639" y="263" class="name">laravel-blog</text><text x="613" y="292" class="desc">Laravel / Blade / Bootstrap / MySQL • Full-stack CRUD app</text><text x="1118" y="312" text-anchor="end" class="status">PUBLIC / COMPLETE</text>
+</g>
+</svg>
