@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the responsive v8 terminal hero used by the profile README."""
+"""Generate the responsive v9 terminal hero used by the profile README."""
 
 from __future__ import annotations
 
@@ -16,7 +16,7 @@ OUT = ROOT / "assets" / "hero"
 OUT.mkdir(parents=True, exist_ok=True)
 
 AVATAR_URL = "https://avatars.githubusercontent.com/u/228095676?v=4&size=1024"
-ASCII_RAMP = " .`,:;i1tfLCG08@"
+ASCII_RAMP = "  ..`,:;i1tfLCG08@"
 
 
 def download_avatar() -> Image.Image:
@@ -76,10 +76,10 @@ def ascii_art(image: Image.Image, columns: int, rows: int) -> list[str]:
         for x in range(columns):
             darkness = (255 - pixels[x, y]) / 255
             edge = 0.0 if x in (0, columns - 1) or y in (0, rows - 1) else edge_pixels[x, y] / 255
-            edge_detail = edge * 0.22 * min(1.0, darkness * 3.0)
+            edge_detail = edge * 0.24 * min(1.0, darkness * 3.0)
             density = max(
                 0.0,
-                min(1.0, (darkness ** 1.35) * 1.08 + edge_detail - 0.04),
+                min(0.76, (darkness ** 1.55) * 0.78 + edge_detail - 0.075),
             )
             index = round(density * (len(ASCII_RAMP) - 1))
             line.append(ASCII_RAMP[index])
@@ -108,7 +108,7 @@ def desktop_svg(portrait: Image.Image) -> str:
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0D1117"/><stop offset="1" stop-color="#07111E"/></linearGradient>
   <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#111A25" stop-opacity=".94"/><stop offset="1" stop-color="#0B141F" stop-opacity=".96"/></linearGradient>
   <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#A5D6FF"/><stop offset=".48" stop-color="#58A6FF"/><stop offset="1" stop-color="#2F81F7"/></linearGradient>
-  <linearGradient id="ascii" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#FFFFFF"/><stop offset=".48" stop-color="#E6EDF3"/><stop offset="1" stop-color="#79C0FF"/></linearGradient>
+  <linearGradient id="ascii" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#E6EDF3"/><stop offset=".52" stop-color="#AAB7C4"/><stop offset="1" stop-color="#8B949E"/></linearGradient>
   <linearGradient id="border" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#30363D"/><stop offset=".5" stop-color="#58A6FF"/><stop offset="1" stop-color="#30363D"/></linearGradient>
   <radialGradient id="halo"><stop stop-color="#58A6FF" stop-opacity=".16"/><stop offset="1" stop-color="#58A6FF" stop-opacity="0"/></radialGradient>
   <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#58A6FF" stroke-opacity=".05"/></pattern>
@@ -180,7 +180,7 @@ def mobile_svg(portrait: Image.Image) -> str:
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0D1117"/><stop offset="1" stop-color="#07111E"/></linearGradient>
   <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#111A25"/><stop offset="1" stop-color="#0B141F"/></linearGradient>
   <linearGradient id="blue"><stop stop-color="#A5D6FF"/><stop offset=".5" stop-color="#58A6FF"/><stop offset="1" stop-color="#2F81F7"/></linearGradient>
-  <linearGradient id="ascii" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#FFFFFF"/><stop offset=".48" stop-color="#E6EDF3"/><stop offset="1" stop-color="#79C0FF"/></linearGradient>
+  <linearGradient id="ascii" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#E6EDF3"/><stop offset=".52" stop-color="#AAB7C4"/><stop offset="1" stop-color="#8B949E"/></linearGradient>
   <linearGradient id="border"><stop stop-color="#30363D"/><stop offset=".5" stop-color="#58A6FF"/><stop offset="1" stop-color="#30363D"/></linearGradient>
   <radialGradient id="halo"><stop stop-color="#58A6FF" stop-opacity=".16"/><stop offset="1" stop-color="#58A6FF" stop-opacity="0"/></radialGradient>
   <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#58A6FF" stroke-opacity=".05"/></pattern>
@@ -228,12 +228,30 @@ def mobile_svg(portrait: Image.Image) -> str:
 def main() -> None:
     portrait = isolate_portrait(download_avatar())
     files = {
-        "omar-profile-v8.svg": desktop_svg(portrait),
-        "omar-profile-v8-mobile.svg": mobile_svg(portrait),
+        "omar-profile-v9.svg": desktop_svg(portrait),
+        "omar-profile-v9-mobile.svg": mobile_svg(portrait),
     }
     for name, contents in files.items():
-        (OUT / name).write_text(contents, encoding="utf-8")
+        svg_path = OUT / name
+        svg_path.write_text(contents, encoding="utf-8")
         print(name)
+
+        # GitHub scales README images to fractional sizes. A 2x raster copy keeps
+        # the ASCII glyphs crisp and avoids colored sub-pixel fringes in browsers.
+        try:
+            import cairosvg
+        except ImportError:
+            continue
+
+        width, height = ((1440, 2360) if "mobile" in name else (2560, 1470))
+        png_path = svg_path.with_suffix(".png")
+        cairosvg.svg2png(
+            bytestring=contents.encode("utf-8"),
+            write_to=str(png_path),
+            output_width=width,
+            output_height=height,
+        )
+        print(png_path.name)
 
 
 if __name__ == "__main__":

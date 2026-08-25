@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1180" viewBox="0 0 720 1180" role="img" aria-labelledby="title description">
+<title id="title">Omar Arafa — Full Stack PHP Developer</title>
+<desc id="description">Mobile premium terminal card with a large, full-frame ASCII portrait of Omar Arafa.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0D1117"/><stop offset="1" stop-color="#07111E"/></linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#111A25"/><stop offset="1" stop-color="#0B141F"/></linearGradient>
+  <linearGradient id="blue"><stop stop-color="#A5D6FF"/><stop offset=".5" stop-color="#58A6FF"/><stop offset="1" stop-color="#2F81F7"/></linearGradient>
+  <linearGradient id="ascii" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#E6EDF3"/><stop offset=".52" stop-color="#AAB7C4"/><stop offset="1" stop-color="#8B949E"/></linearGradient>
+  <linearGradient id="border"><stop stop-color="#30363D"/><stop offset=".5" stop-color="#58A6FF"/><stop offset="1" stop-color="#30363D"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#58A6FF" stop-opacity=".16"/><stop offset="1" stop-color="#58A6FF" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#58A6FF" stroke-opacity=".05"/></pattern>
+  <clipPath id="portraitClip"><rect x="50" y="198" width="620" height="438" rx="12"/></clipPath>
+  <filter id="nameGlow" x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <style>
+    .mono,.ascii,.key,.value,.sec,.foot{font-family:'Courier New',Consolas,monospace}
+    .ascii{font-size:7.6px;letter-spacing:-.22px;fill:url(#ascii)}
+    .key{font-size:15px;font-weight:700;fill:#58A6FF}.value{font-size:15px;font-weight:700;fill:#F0F6FC}
+    .sec{font-size:11px;font-weight:700;letter-spacing:2.2px;fill:#8B949E}.foot{font-size:11px;letter-spacing:1.8px;fill:#8B949E}
+    @keyframes pulse{0%,100%{opacity:.45}50%{opacity:1}}@keyframes scan{0%{transform:translateY(-185px);opacity:0}15%,85%{opacity:.75}100%{transform:translateY(195px);opacity:0}}
+    .pulse{animation:pulse 2.2s ease-in-out infinite}.scan{animation:scan 6.2s linear infinite}
+  </style>
+</defs>
+<rect width="720" height="1180" rx="24" fill="url(#bg)"/><rect x="5" y="5" width="710" height="1170" rx="21" fill="none" stroke="#30363D"/>
+<text x="360" y="43" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="800" letter-spacing="6" fill="url(#blue)" filter="url(#nameGlow)">OMAR ARAFA</text>
+<text x="360" y="63" text-anchor="middle" class="mono" font-size="9.5" font-weight="700" letter-spacing="2.3" fill="#79C0FF">FULL STACK PHP DEVELOPER • SYSTEMS ENGINEER</text>
+<rect x="24" y="80" width="672" height="44" rx="12" fill="#101823" stroke="#21262D"/>
+<circle cx="48" cy="102" r="5" fill="#FF7B72"/><circle cx="66" cy="102" r="5" fill="#D29922"/><circle cx="84" cy="102" r="5" fill="#3FB950"/>
+<text x="108" y="106" class="mono" font-size="11" fill="#8B949E">omar@developer ~ % ./profile</text><circle cx="602" cy="102" r="4.5" fill="#58A6FF" class="pulse"/><text x="617" y="106" class="mono" font-size="9" font-weight="700" letter-spacing="1.5" fill="#58A6FF">BUILDING</text>
+
+<rect x="32" y="144" width="656" height="526" rx="16" fill="url(#panel)" stroke="url(#border)" stroke-opacity=".64"/>
+<text x="50" y="171" class="sec">PORTRAIT / OMAR — COMPLETE FRAME</text><line x1="50" y1="184" x2="670" y2="184" stroke="#21262D"/>
+<g clip-path="url(#portraitClip)"><rect x="50" y="198" width="620" height="438" rx="12" fill="url(#grid)"/><text x="360" y="405" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="105" font-weight="900" letter-spacing="10" fill="#58A6FF" opacity=".025">OMAR</text><ellipse cx="360" cy="414" rx="245" ry="190" fill="url(#halo)"/>
+<text class="ascii" transform="translate(14 0) scale(1.10 1)"><tspan x="104" y="198.00" xml:space="preserve">                        ..   `.      . ` : ` : , .</tspan>
+<tspan x="104" y="202.62" xml:space="preserve">                        ..          .`;`:...```,``</tspan>
+<tspan x="104" y="207.24" xml:space="preserve">                       .,.       ...,:;1i;,....``,</tspan>
+<tspan x="104" y="211.86" xml:space="preserve">                       `,,.     .``,,:i11i:`,...`,</tspan>
+<tspan x="104" y="216.48" xml:space="preserve">                       `,:.   .````,;i;iiii;:`..`,</tspan>
+<tspan x="104" y="221.10" xml:space="preserve">                      .,,`.  ...`,,;1fttttt1i;:```</tspan>
+<tspan x="104" y="225.72" xml:space="preserve">                      .```.......:;LLLLLLLLft1i;:`</tspan>
+<tspan x="104" y="230.34" xml:space="preserve">                      .`:`....`,`iLftt1111ttLf1i:`   `,.</tspan>
+<tspan x="104" y="234.96" xml:space="preserve">                      ..```.....1Lft11iiii1ttfLt:`   ,;,`</tspan>
+<tspan x="104" y="239.58" xml:space="preserve">                      ..`. .., :Lft1i;::::;;itfLt;. .`,,`.</tspan>
+<tspan x="104" y="244.20" xml:space="preserve">                      ...`.`,,`Lfft1i:,,,,:;1ttfLi.  ,,,`.</tspan>
+<tspan x="104" y="248.82" xml:space="preserve">                     .`....`1:::tft1;i;::;iii1fi:;:  .,,,.</tspan>
+<tspan x="104" y="253.44" xml:space="preserve">                      .....::.`:;1ti1i:`,:1tttt;.,;  .,;,.</tspan>
+<tspan x="104" y="258.06" xml:space="preserve">                     ..`...,1,.,ittftt;::ii1111;,:.  .`::.</tspan>
+<tspan x="104" y="262.68" xml:space="preserve">                      `,...1i,`tLLLLLfi;,;i1t1ti1,,.  ....</tspan>
+<tspan x="104" y="267.30" xml:space="preserve">                      ....`1;,`1LLLLLLi:,;tLLLLLt:.   ...</tspan>
+<tspan x="104" y="271.92" xml:space="preserve">                       ``...i``,LLLLLf::`;ifLLLLi.  .</tspan>
+<tspan x="104" y="276.54" xml:space="preserve">                       ``.  ...`;itt1;::,;i;tft;;.  .</tspan>
+<tspan x="104" y="281.16" xml:space="preserve">                       .`.   ...`ii:``.`,,::11i;.   .</tspan>
+<tspan x="104" y="285.78" xml:space="preserve">                       `..   ..``:i:`,,:;;:;;;:,`.  . ....</tspan>
+<tspan x="104" y="290.40" xml:space="preserve">                     .,.`...``:``:1,``,;::i;;;:,.   ,:;;;:.</tspan>
+<tspan x="104" y="295.02" xml:space="preserve">                    ..i,.`.11ti`.:;,,,:;i;11;;:``   .`...</tspan>
+<tspan x="104" y="299.64" xml:space="preserve">                     .`....`....````:::1ii;i::,`...`.</tspan>
+<tspan x="104" y="304.26" xml:space="preserve">                       ....     .`.`..::;;::,,`.,,`:1;:::.</tspan>
+<tspan x="104" y="308.88" xml:space="preserve">                       ....     ..``,`,::::;:,,       ...</tspan>
+<tspan x="104" y="313.50" xml:space="preserve">                      ...      ......,:::;;:::`.       ..</tspan>
+<tspan x="104" y="318.12" xml:space="preserve">                      .. ..``.`,....``:;;;:::,;,.....```.</tspan>
+<tspan x="104" y="322.74" xml:space="preserve">                          .`;,,i,,.`.,,,:::,,:;f:,,;,```</tspan>
+<tspan x="104" y="327.36" xml:space="preserve">                          ``::;1t;:``,,,,,:::i1Liifii,..</tspan>
+<tspan x="104" y="331.98" xml:space="preserve">                         `:if:;iLf;;:``,,,,,:ifLtiLLt:`.</tspan>
+<tspan x="104" y="336.60" xml:space="preserve">                       ..,fLf1i1LLf1;:,,:,::;1LfLttfti:,.</tspan>
+<tspan x="104" y="341.22" xml:space="preserve">                      .`,iLLfftifftt1;::::,:;1ifLfLft1;,..</tspan>
+<tspan x="104" y="345.84" xml:space="preserve">                    ..,1tfLLLfftftt1i;:,,,:;:i:1LffLLfti;:`...</tspan>
+<tspan x="104" y="350.46" xml:space="preserve">                 ..,;;fttLLfffftfLt;;;;;::;:;::LLLLLLLLfft1i:,..</tspan>
+<tspan x="104" y="355.08" xml:space="preserve">                .,ittffLLLLfffLftfti,;:::;i,`.:LLLLLLLLLLLLft1i:`.</tspan>
+<tspan x="104" y="359.70" xml:space="preserve">              .`:fftfLffLLLfffLLLff1`,.,;:`..,1LLLLLLLLLLLLLLLffi:`</tspan>
+<tspan x="104" y="364.32" xml:space="preserve">             .:itLLLLLLLLLffLfLLLLLL1`..`.. .;LLLLLLLLLLLLLLCLLft11,..</tspan>
+<tspan x="104" y="368.94" xml:space="preserve">           .,;ittLLLLfLLLLfLLLLLLLLLL;`. .. `:LLLLLLLLLLLLLffLLLLff:.</tspan>
+<tspan x="104" y="373.56" xml:space="preserve">         ...:f1tffLLLLLLLLfLLLLLLLLLLL:`....,1LLLLLLLLLLLLLfffLLLff,`.</tspan>
+<tspan x="104" y="378.18" xml:space="preserve">        .:::1LffffLLLLLLLLLLCfLLLLLLLLL;`...:LLLLLLLLLLLLLLftfLLLLt:.  .</tspan>
+<tspan x="104" y="382.80" xml:space="preserve">        .,;itfLfLfLLLLLLfLfLLfLLLLLLLLL1,..,;LLLLLLLLLLLLLLfttfLLLf,.  .</tspan>
+<tspan x="104" y="387.42" xml:space="preserve">        ,`iiffLfffLLLLLLLLfLLLLLLLLLLLLL;,.,;LLLLLLLLLLLCLLttLLLLLf:...   ..</tspan>
+<tspan x="104" y="392.04" xml:space="preserve">        `;iiLCLfLfLLLLLffLLLLLLLLLLLLLLLf:.,tLLLLLLLLLLLLLffLLLLLLL;.:.   ,,</tspan>
+<tspan x="104" y="396.66" xml:space="preserve">        ,t11LCLCLLLLLLfLffLLLLLLLLLLLLLLL;`;LLLLLLLLLLLLLffLLLLLLLt;..</tspan>
+<tspan x="104" y="401.28" xml:space="preserve">       .:fitLLLLLLLLLLLtLLLLLLLLLLLLLLLLLL;iLLLLLLLLLLLLLttLLLLLLLt:..</tspan>
+<tspan x="104" y="405.90" xml:space="preserve">       .,t11fLLLLLLLLLfLfLLLLLLLLLLLLLLLLL1tLLLLLLLLLLLLfttfLLLLLft:`</tspan>
+<tspan x="104" y="410.52" xml:space="preserve">       .;t1t1LLLLLLLfCLLLfLLLLLLLLLLLLLLLLLfLLLLLLLLLLLLft1fLLLLLfi:..``......</tspan>
+<tspan x="104" y="415.14" xml:space="preserve">     .`,iffifLLLLLLLfLLffLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLt1fLLLLfff1,::;;;i;;,.</tspan>
+<tspan x="104" y="419.76" xml:space="preserve">    .:fi1LfitLLLLLLLLLfffffLLLLLLLLLLLLLLLffLLLLLLLLLLLL1tLLLLft1:,:,,,,,::::.</tspan>
+<tspan x="104" y="424.38" xml:space="preserve">    .`;iiLt11tLLLLLLLfLftffLLLLLLLLLLLLLLLL1LLLLLLLLLLLLi;fLfffi,`,:``.....`;.</tspan>
+<tspan x="104" y="429.00" xml:space="preserve">       ,1Lft1fLLLLLLLLfftffLLLLLLLLLLLLLLLLLLLLLLLLLLLLfi:;fLLtt:,....     `:</tspan>
+<tspan x="104" y="433.62" xml:space="preserve">     .`;iLLftffLLLLLLLfffffLLLLLLLLLLLLLLLLLLLLLLLLLLLLf1,.;Lt11,``...     ,,</tspan>
+<tspan x="104" y="438.24" xml:space="preserve">     .;,iLLLLtLfLLLLLLLfttfLLLLLLLLLLLLLLLLLLLLLLLLLLLLff,.,fL1;,`...      ,,</tspan>
+<tspan x="104" y="442.86" xml:space="preserve">     .,;iLLLLffLLLLLLLfffffLLLLLLLLLLLLLLLLLLLLLLLLLLLftf:.`;Lti:,:``..    :.</tspan>
+<tspan x="104" y="447.48" xml:space="preserve">      `:i1fLLLfLLLLLLLLffLffLLLLLLLLLLLLLLLLLLLLLLLLLfLff:..:Lf1:::;..     ;.</tspan>
+<tspan x="104" y="452.10" xml:space="preserve">      .;i1tLLLLLLLLLLLLLfLLfLLLLLLLLLLLLLLLLLLLLLLLLLLffL,..;f1;;it,,....  ;.</tspan>
+<tspan x="104" y="456.72" xml:space="preserve">      .;i1fLLLLLLLLLLLftffffLLLLLLLLLLLLLLLLLLLLLLLLLLLLL,.:1ii;,:,;..:,   ;`</tspan>
+<tspan x="104" y="461.34" xml:space="preserve">      .i1ttLLLLLLLLLLLLfffffLLLLLLLLLLLLLLLLLLLLLLLLLLLLf``tL1;:..`,`.``. `;,</tspan>
+<tspan x="104" y="465.96" xml:space="preserve">      .;11LLLLLLLLLLLLffffffLLLLLLLLLLLLLLLLLLLLLLLLLLLLf,itfft,, .   ... `,.</tspan>
+<tspan x="104" y="470.58" xml:space="preserve">      .,itfLLLLLLLLLLLLLfLLLLLLLLLLLLLLLLLLffLLLLLLLLLLLftffLLi;;,,..    .``.</tspan>
+<tspan x="104" y="475.20" xml:space="preserve">      .,1tLLLLLLLLLLLLfLLLLLLLLLLLLLLLLLLLLf1LLLLLLLLLLLfftt;;;ii1t,.     ..</tspan>
+<tspan x="104" y="479.82" xml:space="preserve">      .:iffLLLLLLLLLLLLfLLLLLLLLCLLLLLLLLLLLLLLLLLLLLLLLLLft.,:i111t.</tspan>
+<tspan x="104" y="484.44" xml:space="preserve">      .,tffLLLLLLLLLLLffLLLLLLLfLLLLLLLLLLLLLLLLCLLLLLLffLft:,i1tt1:.</tspan>
+<tspan x="104" y="489.06" xml:space="preserve">      .:itfLLLLLLLLLLLfLLLLLLLLfLLLLLLLLLLLLLLLLLLLLLLLft111iitt1t:.</tspan>
+<tspan x="104" y="493.68" xml:space="preserve">       `itfLLLLLLLLLLLLLLLLLLLLffLLLLLLLLLLLLLLLLLLLLLft11i:;;;;;`.</tspan>
+<tspan x="104" y="498.30" xml:space="preserve">       .;1LLLLLLLLLLLLLLLLLLLLLfffLLLLLLLLLLLLLLLLLLLLLft1i:,.....</tspan>
+<tspan x="104" y="502.92" xml:space="preserve">        `iLLLLLLLLLLLLfLLLLLLLLLfLLLLLLLLLLLLLLLLLLLLLfLtt1:.</tspan>
+<tspan x="104" y="507.54" xml:space="preserve">        `iLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLfffL`.</tspan>
+<tspan x="104" y="512.16" xml:space="preserve">        .iLLLLLLLLLLLLLLLLLLLLfLLLLLLLLLLLLLLLLLLLLLLLLftff,.</tspan>
+<tspan x="104" y="516.78" xml:space="preserve">        .iLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLftff:.</tspan>
+<tspan x="104" y="521.40" xml:space="preserve">         ,tLLLfffffLLLLLfLLLLLLLLLLLLLLLLLLLfifLLLLLLLLttfLi.</tspan>
+<tspan x="104" y="526.02" xml:space="preserve">          ,;1tfftffLLLLLLLLLLfLLLLLLLLLLLLLLffLLLLLLLLLftfLi.    .</tspan>
+<tspan x="104" y="530.64" xml:space="preserve">          .`:i1tttfLLLLLLLLLLfLLLLLLLLLLLLLLLLLLLLLLLLLLtLLi`</tspan>
+<tspan x="104" y="535.26" xml:space="preserve">           .:i1ttffLLLLLLLLLLfLLLLLLLLLLLLLLLLLLLfLLLLLftfLi    ...,.</tspan>
+<tspan x="104" y="539.88" xml:space="preserve">           .`;11tfLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLfLLLLLfLL1,  .``,``</tspan>
+<tspan x="104" y="544.50" xml:space="preserve">          ..`:i11fLLLLLLLLLLLLLLLLLLLLLfLLLLLLLLLLLLLLLLLLL1` ..`:,;`</tspan>
+<tspan x="104" y="549.12" xml:space="preserve">           .`,;i1tLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLfLL;:...,;:;`.</tspan>
+<tspan x="104" y="553.74" xml:space="preserve">            ``:;i1fLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLfLLLi,:.`,:i:..</tspan>
+<tspan x="104" y="558.36" xml:space="preserve">           .``,:i1tfLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLi;``.`i1`.</tspan>
+<tspan x="104" y="562.98" xml:space="preserve">            ..`:;i1ffLLLLLLLLLLLLLLLLLLLLLLLLttLLLLLLLLLLLLi:`  .`..</tspan>
+<tspan x="104" y="567.60" xml:space="preserve">             .,:;i1tfLLLLLLLLLLLLLLLLLLLLLLLLtLLLLLLLLLLLLL;,.</tspan>
+<tspan x="104" y="572.22" xml:space="preserve">             .`::iittfLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL;. ..</tspan>
+<tspan x="104" y="576.84" xml:space="preserve">            ..,`,:i1tffLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL:.</tspan>
+<tspan x="104" y="581.46" xml:space="preserve">            `,`..;i11tffLLLLLLLLLLLLLLLLLLLLLLLLLffLLLLLLLL`</tspan>
+<tspan x="104" y="586.08" xml:space="preserve">            ,;`.`;ti1tttfLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL`</tspan>
+<tspan x="104" y="590.70" xml:space="preserve">            .``.,,;;11ttttLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL,</tspan>
+<tspan x="104" y="595.32" xml:space="preserve">            . ..,,::i1t1tfLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL,.</tspan>
+<tspan x="104" y="599.94" xml:space="preserve">              ...`,:;1111fLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL1.</tspan>
+<tspan x="104" y="604.56" xml:space="preserve">               ..:,i;i11itfLLLLLLLLLLLLLffLLLLLLLLLLLLLLLLL:.</tspan>
+<tspan x="104" y="609.18" xml:space="preserve">              ..`:,;i;1ii1fLLLLLLLLLLLLLi;LLLLLLLLLLLLLLLLL:.</tspan>
+<tspan x="104" y="613.80" xml:space="preserve">                .,;1ii;iittLLLLLLLLLLLLL;`iLLLLLLLLLLLLLLLL:.</tspan>
+<tspan x="104" y="618.42" xml:space="preserve">                 .,:f;;iitfLLLLLLLLLLLLt:,iLLLLLLLLLLLLLLLL:.</tspan>
+<tspan x="104" y="623.04" xml:space="preserve">                   ,;,iitLLLLLLLLLLLLLL1:.:tLLLLLLLLLLLLLLL,`</tspan>
+<tspan x="104" y="627.66" xml:space="preserve">                      .;LLLLLLLLLLLLLLL1 ..tLLLLLLLLLLLLLLL.</tspan></text><rect x="82" y="366" width="556" height="1.2" fill="url(#blue)" opacity=".56" class="scan"/></g>
+<rect x="50" y="640" width="620" height="18" rx="7" fill="#0B1521" stroke="#1F6FEB" stroke-opacity=".7"/><text x="360" y="653" text-anchor="middle" class="mono" font-size="9.3" font-weight="700" letter-spacing="1.25" fill="#79C0FF">COMPLETE FRAME • CLEAN ASCII • GITHUB OPTIMIZED</text>
+
+<rect x="32" y="690" width="656" height="398" rx="16" fill="url(#panel)" stroke="url(#border)" stroke-opacity=".55"/>
+<text x="50" y="718" class="sec">PROFILE / ENGINEER</text><line x1="50" y1="731" x2="670" y2="731" stroke="#21262D"/>
+<text x="50" y="763" class="mono" font-size="15" font-weight="700" fill="#F0F6FC">omararafa295-cmd</text>
+<text x="50" y="800" class="key">Name:</text><text x="210" y="800" class="value">Omar Arafa</text>
+<text x="50" y="829" class="key">Role:</text><text x="210" y="829" class="value">Full Stack PHP Developer</text>
+<text x="50" y="858" class="key">Major:</text><text x="210" y="858" class="value">Computer &amp; Systems Engineering</text>
+<text x="50" y="887" class="key">University:</text><text x="210" y="887" class="value">Zagazig University</text>
+<text x="50" y="916" class="key">Based:</text><text x="210" y="916" class="value">Egypt</text>
+<line x1="50" y1="939" x2="670" y2="939" stroke="#21262D"/><text x="50" y="963" class="sec">BUILD.FOCUS</text>
+<text x="50" y="995" class="key">Backend:</text><text x="210" y="995" class="value">PHP / Laravel / APIs / MySQL</text>
+<text x="50" y="1024" class="key">Frontend:</text><text x="210" y="1024" class="value">HTML / CSS / JS / Bootstrap</text>
+<text x="50" y="1053" class="key">Toolchain:</text><text x="210" y="1053" class="value">Git / GitHub / VS Code / Arduino</text>
+
+<rect x="24" y="1110" width="672" height="42" rx="10" fill="#0E1621" stroke="#21262D"/><rect x="24" y="1110" width="672" height="1.5" fill="url(#blue)" opacity=".8"/><text x="360" y="1136" text-anchor="middle" class="foot">PHP / LARAVEL / MYSQL / JAVASCRIPT / EMBEDDED SYSTEMS / IOT</text>
+</svg>
