@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="980" viewBox="0 0 720 980" role="img" aria-labelledby="title description">
+  <title id="title">Omar Arafa — Engineering Command Center</title>
+  <desc id="description">Mobile premium developer profile hero for Omar Arafa.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#070B12"/><stop offset=".52" stop-color="#0B111B"/><stop offset="1" stop-color="#071321"/></linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#111A26"/><stop offset="1" stop-color="#0B121C"/></linearGradient>
+    <linearGradient id="blue"><stop stop-color="#B8E1FF"/><stop offset=".5" stop-color="#58A6FF"/><stop offset="1" stop-color="#7C5CFC"/></linearGradient>
+    <radialGradient id="core"><stop stop-color="#B8E1FF"/><stop offset=".2" stop-color="#58A6FF"/><stop offset=".58" stop-color="#1F6FEB" stop-opacity=".55"/><stop offset="1" stop-color="#1F6FEB" stop-opacity="0"/></radialGradient>
+    <radialGradient id="ambient"><stop stop-color="#1F6FEB" stop-opacity=".2"/><stop offset="1" stop-color="#1F6FEB" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#58A6FF" stroke-opacity=".045"/></pattern>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <style>
+      .sans{font-family:Inter,'Segoe UI',Arial,sans-serif}.mono{font-family:'Courier New',Consolas,monospace}.chip{fill:#0D1723;stroke:#24364C}.node{fill:#0C1621;stroke:#2F81F7;stroke-opacity:.72}
+      @keyframes spin{to{transform:rotate(360deg)}}@keyframes reverse{to{transform:rotate(-360deg)}}@keyframes pulse{0%,100%{opacity:.45}50%{opacity:1}}@keyframes dash{to{stroke-dashoffset:-90}}
+      .oa{transform-origin:360px 675px;animation:spin 25s linear infinite}.ob{transform-origin:360px 675px;animation:reverse 18s linear infinite}.pulse{animation:pulse 2.4s ease-in-out infinite}.flow{animation:dash 5s linear infinite}
+      @media(prefers-reduced-motion:reduce){.oa,.ob,.pulse,.flow{animation:none}}
+    </style>
+  </defs>
+  <rect width="720" height="980" rx="28" fill="url(#bg)"/><rect x="5" y="5" width="710" height="970" rx="24" fill="none" stroke="#263343"/><rect width="720" height="980" rx="28" fill="url(#grid)"/>
+  <g class="mono" font-size="11" letter-spacing="1.5"><circle cx="31" cy="32" r="5" fill="#FF7B72"/><circle cx="50" cy="32" r="5" fill="#D29922"/><circle cx="69" cy="32" r="5" fill="#3FB950"/><text x="90" y="36" fill="#8B949E">OMAR.SYSTEMS</text><circle cx="626" cy="32" r="4" fill="#3FB950" class="pulse"/><text x="640" y="36" fill="#7EE787" font-weight="700">ONLINE</text></g>
+  <line x1="24" y1="57" x2="696" y2="57" stroke="#202B39"/>
+
+  <g transform="translate(38 94)">
+    <text class="mono" x="0" y="0" font-size="12" font-weight="700" letter-spacing="2.3" fill="#58A6FF">FULL STACK × SYSTEMS ENGINEERING</text>
+    <text class="sans" x="-2" y="70" font-size="58" font-weight="850" letter-spacing="2" fill="#F0F6FC">OMAR <tspan fill="url(#blue)">ARAFA</tspan></text>
+    <text class="sans" x="0" y="112" font-size="19" font-weight="650" fill="#D6E2EE">Full Stack PHP Developer</text>
+    <text class="sans" x="0" y="146" font-size="15" fill="#8B949E">Scalable backends • Responsive interfaces</text>
+    <text class="sans" x="0" y="172" font-size="15" fill="#8B949E">Connected hardware • Systems thinking</text>
+    <g transform="translate(0 204)" class="mono" font-size="11" font-weight="700">
+      <rect class="chip" width="116" height="38" rx="11"/><circle cx="19" cy="19" r="4" fill="#FF2D20"/><text x="32" y="23" fill="#E6EDF3">LARAVEL</text>
+      <g transform="translate(128)"><rect class="chip" width="100" height="38" rx="11"/><circle cx="19" cy="19" r="4" fill="#58A6FF"/><text x="32" y="23" fill="#E6EDF3">MYSQL</text></g>
+      <g transform="translate(240)"><rect class="chip" width="126" height="38" rx="11"/><circle cx="19" cy="19" r="4" fill="#7C5CFC"/><text x="32" y="23" fill="#E6EDF3">REST APIs</text></g>
+      <g transform="translate(378)"><rect class="chip" width="90" height="38" rx="11"/><circle cx="19" cy="19" r="4" fill="#3FB950"/><text x="32" y="23" fill="#E6EDF3">IoT</text></g>
+    </g>
+    <rect y="270" width="644" height="82" rx="14" fill="url(#panel)" stroke="#243244"/>
+    <g class="mono" font-size="10" letter-spacing="1.1" fill="#8B949E"><text x="20" y="296">CURRENT FOCUS</text><text x="242" y="296">ENGINEERING CORE</text><text x="506" y="296">BASED</text></g>
+    <g class="sans" font-size="13" font-weight="700" fill="#E6EDF3"><text x="20" y="326">Scalable Backends</text><text x="242" y="326">Computer &amp; Systems</text><text x="506" y="326">Egypt</text></g>
+  </g>
+
+  <g>
+    <rect x="28" y="478" width="664" height="412" rx="24" fill="url(#panel)" stroke="#2A3A4D"/>
+    <text class="mono" x="52" y="511" font-size="11" font-weight="700" letter-spacing="2" fill="#8B949E">SYSTEM ARCHITECTURE / LIVE</text><circle cx="659" cy="506" r="4" fill="#58A6FF" class="pulse"/>
+    <line x1="52" y1="526" x2="668" y2="526" stroke="#202D3C"/><ellipse cx="360" cy="675" rx="270" ry="190" fill="url(#ambient)"/>
+    <g fill="none" stroke="#58A6FF"><ellipse class="oa" cx="360" cy="675" rx="205" ry="112" stroke-opacity=".22" stroke-dasharray="8 13"/><ellipse class="ob" cx="360" cy="675" rx="134" ry="174" stroke-opacity=".18" stroke-dasharray="26 18"/><circle cx="360" cy="675" r="82" stroke-opacity=".28" stroke-dasharray="3 8" class="flow"/></g>
+    <g stroke="#58A6FF" stroke-opacity=".3" stroke-dasharray="5 7" class="flow"><line x1="360" y1="675" x2="126" y2="590"/><line x1="360" y1="675" x2="594" y2="590"/><line x1="360" y1="675" x2="126" y2="790"/><line x1="360" y1="675" x2="594" y2="790"/></g>
+    <circle cx="360" cy="675" r="102" fill="url(#core)" opacity=".5"/><circle cx="360" cy="675" r="58" fill="#091522" stroke="#69B7FF" stroke-width="1.5" filter="url(#glow)"/>
+    <path d="M336 655l-20 20 20 20M384 655l20 20-20 20M370 645l-20 61" fill="none" stroke="#B8E1FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <g class="mono" font-size="10" font-weight="700">
+      <g transform="translate(62 567)"><rect class="node" width="128" height="48" rx="12"/><circle cx="18" cy="24" r="4" fill="#FF2D20"/><text x="31" y="21" fill="#F0F6FC">BACKEND</text><text x="31" y="35" fill="#8B949E" font-size="8">PHP / LARAVEL</text></g>
+      <g transform="translate(566 567)"><rect class="node" width="92" height="48" rx="12"/><circle cx="16" cy="24" r="4" fill="#58A6FF"/><text x="28" y="21" fill="#F0F6FC">DATA</text><text x="28" y="35" fill="#8B949E" font-size="8">MYSQL</text></g>
+      <g transform="translate(62 766)"><rect class="node" width="128" height="48" rx="12"/><circle cx="18" cy="24" r="4" fill="#7C5CFC"/><text x="31" y="21" fill="#F0F6FC">INTERFACE</text><text x="31" y="35" fill="#8B949E" font-size="8">JS / BOOTSTRAP</text></g>
+      <g transform="translate(546 766)"><rect class="node" width="112" height="48" rx="12"/><circle cx="17" cy="24" r="4" fill="#3FB950"/><text x="30" y="21" fill="#F0F6FC">EMBEDDED</text><text x="30" y="35" fill="#8B949E" font-size="8">MCU / IOT</text></g>
+    </g>
+  </g>
+  <rect x="24" y="920" width="672" height="36" rx="10" fill="#0A121C" stroke="#202D3C"/><text class="mono" x="42" y="943" font-size="10" letter-spacing="1.3" fill="#8B949E">omar@developer:~$</text><text class="mono" x="190" y="943" font-size="10" font-weight="700" letter-spacing="1.3" fill="#79C0FF">BUILD • LEARN • SHIP</text>
+</svg>
