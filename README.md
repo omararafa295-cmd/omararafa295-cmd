@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(max-width: 760px)" srcset="./assets/hero/omar-profile-v5-mobile.svg">
-    <img src="./assets/hero/omar-profile-v5.svg" alt="Omar Arafa, Full Stack PHP Developer" width="100%">
+    <source media="(max-width: 760px)" srcset="./assets/hero/omar-profile-v6-mobile.svg">
+    <img src="./assets/hero/omar-profile-v6.svg" alt="Omar Arafa, Full Stack PHP Developer" width="100%">
   </picture>
 </p>
 
@@ -112,7 +112,7 @@ class OmarArafa implements FullStackInterface, ControlSystemsInterface
 ## `~/selected-work` — Active Builds
 
 <p align="center">
-  <img src="./assets/selected-work.svg" alt="Selected GitHub projects" width="100%" />
+  <img src="./assets/selected-work-v2.svg" alt="Selected GitHub projects" width="100%" />
 </p>
 
 <div align="center">
