@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(max-width: 760px)" srcset="./assets/hero/omar-profile-v4-mobile.svg">
-    <img src="./assets/hero/omar-profile-v4.svg" alt="Omar Arafa, Full Stack PHP Developer" width="100%">
+    <source media="(max-width: 760px)" srcset="./assets/hero/omar-profile-v5-mobile.svg">
+    <img src="./assets/hero/omar-profile-v5.svg" alt="Omar Arafa, Full Stack PHP Developer" width="100%">
   </picture>
 </p>
 
@@ -16,6 +16,7 @@
 <a href="mailto:omararafa294@gmail.com">
   <img src="https://img.shields.io/badge/Email-0D1117?style=for-the-badge&logo=gmail&logoColor=58A6FF" alt="Email" />
 </a>
+<img src="https://komarev.com/ghpvc/?username=omararafa295-cmd&label=PROFILE+VIEWS&color=1f6feb&style=for-the-badge" alt="Profile Views" />
 
 </div>
 
@@ -108,22 +109,23 @@ class OmarArafa implements FullStackInterface, ControlSystemsInterface
 
 ---
 
+## `~/selected-work` — Active Builds
+
+<p align="center">
+  <img src="./assets/selected-work.svg" alt="Selected GitHub projects" width="100%" />
+</p>
+
 <div align="center">
 
-### `omar@developer:~$ keep_building_`
+<a href="https://github.com/omararafa295-cmd/xero-office-ecommerce"><img src="https://img.shields.io/badge/Xero_Office-0D1117?style=for-the-badge&logo=laravel&logoColor=58A6FF" alt="Xero Office" /></a>
+<a href="https://github.com/omararafa295-cmd/Reservations-Monitor-Bot"><img src="https://img.shields.io/badge/Reservations_Bot-0D1117?style=for-the-badge&logo=nodedotjs&logoColor=58A6FF" alt="Reservations Monitor Bot" /></a>
+<a href="https://github.com/omararafa295-cmd/iqraa-quran-app"><img src="https://img.shields.io/badge/Iqraa-0D1117?style=for-the-badge&logo=github&logoColor=58A6FF" alt="Iqraa" /></a>
+<a href="https://github.com/omararafa295-cmd/laravel-blog"><img src="https://img.shields.io/badge/Laravel_Blog-0D1117?style=for-the-badge&logo=laravel&logoColor=58A6FF" alt="Laravel Blog" /></a>
 
-<img width="500" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=omararafa295-cmd&theme=github_dark" alt="GitHub Stats" />
+</div>
 
-<br><br>
+---
 
-<img width="500" src="https://streak-stats.demolab.com?user=omararafa295-cmd&theme=github-dark-blue&border_radius=10&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF" alt="GitHub Streak" />
-
-<br><br>
-
-<img width="500" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=omararafa295-cmd&theme=github_dark" alt="Top Languages" />
-
-<br><br>
-
-<img src="https://komarev.com/ghpvc/?username=omararafa295-cmd&label=PROFILE+VIEWS&color=1f6feb&style=flat-square" alt="Profile Views" />
-
+<div align="center">
+  <sub>omar@developer:~$ build • learn • ship</sub>
 </div>
