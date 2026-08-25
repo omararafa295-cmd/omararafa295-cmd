@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1080" viewBox="0 0 720 1080" role="img" aria-labelledby="title description">
+<title id="title">Omar Arafa — Full Stack PHP Developer</title><desc id="description">Responsive premium terminal profile card with full-frame ASCII portrait.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0D1117"/><stop offset="1" stop-color="#08111D"/></linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#111A25"/><stop offset="1" stop-color="#0D151F"/></linearGradient>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#8BCBFF"/><stop offset=".52" stop-color="#58A6FF"/><stop offset="1" stop-color="#2F81F7"/></linearGradient>
+  <linearGradient id="ascii" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#F0F6FC"/><stop offset=".58" stop-color="#C9D1D9"/><stop offset="1" stop-color="#79C0FF"/></linearGradient>
+  <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse"><path d="M38 0H0V38" fill="none" stroke="#58A6FF" stroke-opacity=".045"/></pattern>
+  <filter id="nameGlow" x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <style>.mono,.ascii,.key,.value,.sec,.foot{font-family:'Courier New',Consolas,monospace}.ascii{font-size:5.75px;letter-spacing:-.12px;fill:url(#ascii)}.key{font-size:15px;font-weight:700;fill:#58A6FF}.value{font-size:15px;font-weight:700;fill:#F0F6FC}.sec{font-size:12px;font-weight:700;letter-spacing:2px;fill:#8B949E}.foot{font-size:10px;letter-spacing:1.35px;fill:#8B949E}@keyframes pulse{0%,100%{opacity:.45}50%{opacity:1}}.pulse{animation:pulse 2.2s ease-in-out infinite}</style>
+</defs>
+<rect width="720" height="1080" rx="22" fill="url(#bg)"/><rect x="5" y="5" width="710" height="1070" rx="19" fill="none" stroke="#30363D"/>
+<text x="360" y="42" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="800" letter-spacing="5" fill="url(#blue)" filter="url(#nameGlow)">OMAR ARAFA</text>
+<text x="360" y="62" text-anchor="middle" class="mono" font-size="9" font-weight="700" letter-spacing="1.7" fill="#79C0FF">FULL STACK PHP DEVELOPER • SYSTEMS ENGINEER</text>
+<rect x="24" y="80" width="672" height="42" rx="12" fill="#101823" stroke="#21262D"/>
+<circle cx="46" cy="101" r="5" fill="#FF7B72"/><circle cx="64" cy="101" r="5" fill="#D29922"/><circle cx="82" cy="101" r="5" fill="#3FB950"/>
+<text x="105" y="105" class="mono" font-size="11" fill="#8B949E">omar@developer ~ % ./profile</text><circle cx="602" cy="101" r="4" fill="#58A6FF" class="pulse"/><text x="614" y="105" class="mono" font-size="9" letter-spacing="1.6" fill="#58A6FF">BUILDING</text>
+<rect x="32" y="142" width="656" height="418" rx="16" fill="url(#panel)" stroke="#30363D"/>
+<text x="50" y="168" class="sec">PORTRAIT / OMAR — FULL FRAME</text><line x1="50" y1="180" x2="670" y2="180" stroke="#21262D"/>
+<rect x="50" y="190" width="620" height="342" rx="12" fill="url(#grid)"/><text x="360" y="335" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="86" font-weight="900" letter-spacing="10" fill="#58A6FF" opacity=".025">OMAR</text>
+<text class="ascii" transform="translate(-20 0) scale(1.25 1)"><tspan x="185" y="172.00" xml:space="preserve">                                 f1i,.`;i1t</tspan>
+<tspan x="185" y="177.60" xml:space="preserve">                               Cf:,,,,,,:,`tf</tspan>
+<tspan x="185" y="183.20" xml:space="preserve">                             GL:``````...,,:,f</tspan>
+<tspan x="185" y="188.80" xml:space="preserve">                            G;. .,`,,,,``.  ,ifLC</tspan>
+<tspan x="185" y="194.40" xml:space="preserve">                          tC,...```,,,,```.   ;LCf</tspan>
+<tspan x="185" y="200.00" xml:space="preserve">                        fCLtt`::ii1i;;;11i:``ftC8C</tspan>
+<tspan x="185" y="205.60" xml:space="preserve">                        8iif008GG08t;1fL111ttGCf@</tspan>
+<tspan x="185" y="211.20" xml:space="preserve">                       8tGLG`,1;1:t00fCG11i1L11@0L</tspan>
+<tspan x="185" y="216.80" xml:space="preserve">                        fL;L      ,G;t:L`    .i@C</tspan>
+<tspan x="185" y="222.40" xml:space="preserve">                        8L:if;```:0Ltit0L:..`;f@</tspan>
+<tspan x="185" y="228.00" xml:space="preserve">                        C8;;:``.,1GGGitCt``.,,;0</tspan>
+<tspan x="185" y="233.60" xml:space="preserve">                       ttLG:,;f:GfLC1:,itt ```tG</tspan>
+<tspan x="185" y="239.20" xml:space="preserve">                      fLtfC1``;,10@GLGLf1; .,i0</tspan>
+<tspan x="185" y="244.80" xml:space="preserve">                           tL`,:;i11`,:;,,.`1C</tspan>
+<tspan x="185" y="250.40" xml:space="preserve">                            L;,i111;..`,,::,L</tspan>
+<tspan x="185" y="256.00" xml:space="preserve">                           GC;:;i1fi:,``,` ,t0</tspan>
+<tspan x="185" y="261.60" xml:space="preserve">                          00L::,,:i:``.:`.`:LC@0Lt</tspan>
+<tspan x="185" y="267.20" xml:space="preserve">                       tG@f8ff1:,,:;`.`,` `:i 0@CL088GLff</tspan>
+<tspan x="185" y="272.80" xml:space="preserve">                    tL0CG8L@; .,:,``..   .   i1@t:.,tGGfL8ftt</tspan>
+<tspan x="185" y="278.40" xml:space="preserve">                 LG8@ft`CG80L:    ....   .  1f;80,.. ti1tfC;i1Lf</tspan>
+<tspan x="185" y="284.00" xml:space="preserve">              tC888GG.iiiL0C@t;.....``...``tG;`C@1,. ::   .t:.iGCL</tspan>
+<tspan x="185" y="289.60" xml:space="preserve">           fC01ffit@ ;;t,:1:8GiL1:``````,tf1f  ,81.   i    tiLtC@@</tspan>
+<tspan x="185" y="295.20" xml:space="preserve">        fG@f:Liii,@i G,f,;`.1t8;1ft1ii;1ti:L`   tL    1    1 G0f8LL</tspan>
+<tspan x="185" y="300.80" xml:space="preserve">       C0@LG;;t; tCi Gf1;`: `ffttLf;;;;;;:;f   11f    L   :f,fCLG;G</tspan>
+<tspan x="185" y="306.40" xml:space="preserve">   f0@@0tG0fL C.,0.t`0i.C;   ;;::;fL,,,,::L`  t;.t    1  `1fffCi@ L</tspan>
+<tspan x="185" y="312.00" xml:space="preserve">   0@GGGift@0`1.1i ,CGi:L1    f `::1L,`,::L`:ti  t    1  1f;CLLff:C</tspan>
+<tspan x="185" y="317.60" xml:space="preserve">   G@LtG;f1CGL`f1. .0:;tii    1.  `,tt:,:tii1;   i    ,`.itCGCtf.1G</tspan>
+<tspan x="185" y="323.20" xml:space="preserve">   GfGf;0iCfi8 C` .01,;t t    `i    1tL:;G,tL.   ``   ,,:Ct1;,;::t0</tspan>
+<tspan x="185" y="328.80" xml:space="preserve">   8tfC 0LLt:C.:1`LfCL` `1     1   .;:1t1Lt,;    ,:   `:G1`.`:i::CG</tspan>
+<tspan x="185" y="334.40" xml:space="preserve">  LG;G0`t;1Cttt.1Ct`L1  ,,1    ;.    f.iLt: i`   .i   :CfC:..i,.`fG</tspan>
+<tspan x="185" y="340.00" xml:space="preserve">  01fGCfi  `:;L1CL:1L1:`.`t    .1    i,.t`  ;.   `;   tftL,. .t:tf0</tspan>
+<tspan x="185" y="345.60" xml:space="preserve">  @iiCt0;    :`it11.,L:,. i     1    ,1;L`  :    ``  .C8G::,`:ftLG@</tspan>
+<tspan x="185" y="351.20" xml:space="preserve">  8i`Ci1L    i.`,f:``f;`. ,:    ;.    1ff;  :    :;  1GGfi....if;i0</tspan>
+<tspan x="185" y="356.80" xml:space="preserve"> fLL,C:itC   i   .f..11`  .t    `;    ti    :.   ,:.`LfG L:.,.`f1;G</tspan>
+<tspan x="185" y="362.40" xml:space="preserve"> GfL:f:1:f;  t    t.`:L  .`f     1    i,    ;`   `i,CLCG  L`,:111iG</tspan>
+<tspan x="185" y="368.00" xml:space="preserve"> 8CLf:`,:;L`.1   .f.,;L:`;.;,    t    1;    ``   ;iit1t8   0tG@  0</tspan>
+<tspan x="185" y="373.60" xml:space="preserve"> 0C10,. `.t   ` .;f`.`Gi:  `;    1    i;    ;,   i``tLLL   C;;;i0GC</tspan>
+<tspan x="185" y="379.20" xml:space="preserve"> 011@i....f      11`,;Ct    1    1:   :;    ,:   :i`1t1t  fi;;;;tC08</tspan>
+<tspan x="185" y="384.80" xml:space="preserve"> 0tC01`` .i   ` `,f,;,fi    t.  .1,   .;  . ,i   ,i:1C:GfL:.`:tt;;1C</tspan>
+<tspan x="185" y="390.40" xml:space="preserve"> G1f@;```:t    ```1i:.`t    1. ..;;    i`;,.`f.  i:.`t,@L;:::;,:tfCL</tspan>
+<tspan x="185" y="396.00" xml:space="preserve">C0C0@f;:.;;  i  ,,f;.  f   ,1;.`,.1    1,i:, ;L` i, t1t0C,f10,::.,t0</tspan>
+<tspan x="185" y="401.60" xml:space="preserve">CLL1Lf,.  1. .  i`L` , 1`  :f1;`. i    t:     L..:t1;iCCi,CL;;i,iLCC</tspan>
+<tspan x="185" y="407.20" xml:space="preserve">0L;iiG:.  :, .  `;1i  `:1. ,fi``  t    ;;     f   t;;1GCtCf;;i`,1C</tspan>
+<tspan x="185" y="412.80" xml:space="preserve">  18;:` ::   :   tti.,` f```fC.   t    .1     f  `; fiGGLLLft111</tspan>
+<tspan x="185" y="418.40" xml:space="preserve">   0`   :;   :  .;1i `` L.``1L    1     G     i: tLiL`001CC</tspan>
+<tspan x="185" y="424.00" xml:space="preserve">   G`   ,`   ;   ,;t..`,L ``11    :,    G.    i, `1Ltt1tftG</tspan>
+<tspan x="185" y="429.60" xml:space="preserve">   G`   1    i. ..;f`. .L```;t    `;    L`.,. 1` .t`,CLiC18</tspan>
+<tspan x="185" y="435.20" xml:space="preserve">    G;:,t,:;,:; . .1,  .L:., t     f    t:Lf. i:`ff`,ftt:t0</tspan>
+<tspan x="185" y="440.80" xml:space="preserve">    f1`...   `,.`  :i   1::` i,    t    1i     ff:f,,f1f.`0</tspan>
+<tspan x="185" y="446.40" xml:space="preserve">     C:`.     ,..  ;;  .t,.  ,i    f    ,t     ti t,;tit; L</tspan>
+<tspan x="185" y="452.00" xml:space="preserve">      C,`     .,.  .t  .f:   .t    t`    C    `1, f`;C1;f`C</tspan>
+<tspan x="185" y="457.60" xml:space="preserve">       t,.  `  `.   L  .:;   .f    ,;    t; . i: `f,`ft;,fL</tspan>
+<tspan x="185" y="463.20" xml:space="preserve">       C,`..`  `.   f    f    1.   .1    f; `.f`.`f` iC;.iG</tspan>
+<tspan x="185" y="468.80" xml:space="preserve">        1,..`   :   t    L    ;1.   f    tit1.,t.`,L. `L`iC</tspan>
+<tspan x="185" y="474.40" xml:space="preserve">        C;` ,`   :  i`   :;   ,f.   L    :f1:. L   i; `1if</tspan>
+<tspan x="185" y="480.00" xml:space="preserve">         L:```   .`,`i    f   .t    f    .f`,``t.  ;i. ;fG</tspan>
+<tspan x="185" y="485.60" xml:space="preserve">         L;,;t .   .if.   f   .f    ;,    1;`.,i;. ,ii,, ,L</tspan>
+<tspan x="185" y="491.20" xml:space="preserve">         C:;G; `,   `1`   f   .t    `1    ii:`.,1;,,`     L</tspan>
+<tspan x="185" y="496.80" xml:space="preserve">         L;;0,`:;, .:i:   1.   ;,   .1    ti, .:i,        L</tspan>
+<tspan x="185" y="502.40" xml:space="preserve">         fffLi,t:. i:1;   ;:   :;   ,f..`,i:i,.           L</tspan>
+<tspan x="185" y="508.00" xml:space="preserve">          LCLt:1:``G:;i        ,i  .`CL;    .             L</tspan>
+<tspan x="185" y="513.60" xml:space="preserve">           fGL::1,,ff1t             ,L L.                 L</tspan>
+<tspan x="185" y="519.20" xml:space="preserve">             tLit1`,t,              1   t                 L</tspan>
+<tspan x="185" y="524.80" xml:space="preserve">                 ftt                f   L.               ;</tspan>
+<tspan x="185" y="530.40" xml:space="preserve">                   C                f   C;               f</tspan>
+<tspan x="185" y="536.00" xml:space="preserve">                    f               C    i              .L</tspan>
+<tspan x="185" y="541.60" xml:space="preserve">                    L,             .L    L              ,f</tspan>
+<tspan x="185" y="547.20" xml:space="preserve">                     L`.           `L     t             `</tspan></text>
+<rect x="50" y="534" width="620" height="18" rx="7" fill="#0B1521" stroke="#1F6FEB" stroke-opacity=".65"/><text x="360" y="547" text-anchor="middle" class="mono" font-size="9" font-weight="700" letter-spacing="1.25" fill="#79C0FF">FULL FRAME • HIGH-DETAIL ASCII • VECTOR SHARP</text>
+<rect x="32" y="584" width="656" height="410" rx="16" fill="url(#panel)" stroke="#30363D"/><text x="50" y="610" class="sec">PROFILE / ENGINEER</text><line x1="50" y1="622" x2="670" y2="622" stroke="#21262D"/>
+<text x="50" y="652" class="mono" font-size="15" font-weight="700" fill="#F0F6FC">omararafa295-cmd</text>
+<text x="50" y="686" class="key">Name:</text><text x="210" y="686" class="value">Omar Arafa</text>
+<text x="50" y="715" class="key">Role:</text><text x="210" y="715" class="value">Full Stack PHP Developer</text>
+<text x="50" y="744" class="key">Major:</text><text x="210" y="744" class="value">Computer &amp; Systems Engineering</text>
+<text x="50" y="773" class="key">University:</text><text x="210" y="773" class="value">Zagazig University</text>
+<text x="50" y="802" class="key">Based:</text><text x="210" y="802" class="value">Egypt</text>
+<line x1="50" y1="824" x2="670" y2="824" stroke="#21262D"/><text x="50" y="848" class="sec">BUILD.FOCUS</text>
+<text x="50" y="881" class="key">Backend:</text><text x="210" y="881" class="value">PHP / Laravel / APIs / MySQL</text>
+<text x="50" y="910" class="key">Frontend:</text><text x="210" y="910" class="value">HTML / CSS / JS / Bootstrap</text>
+<text x="50" y="939" class="key">Hardware:</text><text x="210" y="939" class="value">PID / Sensors / MCU / IoT</text>
+<text x="50" y="968" class="key">Toolchain:</text><text x="210" y="968" class="value">Git / GitHub / VS Code / Arduino</text>
+<rect x="24" y="1016" width="672" height="36" rx="10" fill="#0E1621" stroke="#21262D"/><rect x="24" y="1016" width="672" height="1.5" fill="url(#blue)" opacity=".75"/><text x="360" y="1039" text-anchor="middle" class="foot">PHP / LARAVEL / MYSQL / JAVASCRIPT / EMBEDDED SYSTEMS / IOT</text>
+</svg>
